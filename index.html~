@@ -31,7 +31,6 @@
     			<h2 id="login_label">Login</h2>
     			<label id="user_label">Usuario:</label>
     			<input id="user_input" type="text" name="user"/>
-    			<div class="cleaner"/>
     			<label id="passwd_label">Password:</label>
     			<input type="password" name="passwd" id="paasswd_input"/>
     		</form>

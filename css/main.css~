@@ -115,7 +115,7 @@ header{
 
 #login_label{
 	margin-left: 45%;
-	margin-bottom: 10%;
+	margin-bottom: 20%;
 }
 
 #user_label{
