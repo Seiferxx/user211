@@ -23,17 +23,24 @@
 
         <!-- Add your site or application content here -->
         <header>
-        	<h1>SUCE<h1>
-        	<h4>Sistema Universitario de Control Escolar</h4>
+        	<img src="./img/lion_logo.gif" id="header_image"/>
+        	<h1 id="header_1">SUCE<h1>
+        	<!div class="cleaner"/>
+        	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
         </header>
         <section id="login">
     		<form>
     			<h2 id="login_label">Login</h2>
-    			<label id="user_label">Usuario:</label>
-    			<input id="user_input" type="text" name="user"/>
-    			<div class="cleaner"/>
-    			<label id="passwd_label">Password:</label>
-    			<input type="password" name="passwd" id="paasswd_input"/>
+    			<div class="cleaner" />
+				<div id="user">
+					<label id="user_label">Usuario||||:</label>
+					<input id="user_input" type="text" name="user"/>
+    			</div>
+    			<div id="passwd">
+					<label id="passwd_label">Password:</label>
+					<input type="password" name="passwd" id="paasswd_input"/>
+    			</div>
+    			<input id="login_button" type="button" value="Entrar" />
     		</form>
         </section>
         <footer>
