@@ -93,14 +93,22 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+html{
+	background-image: url("../img/img01.jpg");
+	background-repeat:repeat;
+}
+
 header{
 	background-color: #738e90;
 	width: 80%;
-	height: 170px; 
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 10%;
 	margin-right: 10%;
 	border-radius: 10px;
+}
+
+.cleaner{
+	clear: both;
 }
 
 #header_image{
@@ -108,112 +116,71 @@ header{
 	height: 130px;
 	margin-left: 3%;
 	margin-top: 1%;
-	margin-right: 3%;
+	margin-right: 8%;
+	margin-bottom: 1%;	
 	float:left;
 }
 
 #header_1{
 	float: left;
-	font-size: 50px;
+	font-size: 60px;
+	margin-top: 3%;
+	margin-bottom: 0%;
 }
 
 #header_2{
 	float: left;
-	margin-top: 7px;
-	margin-left: 60%;
+	margin-top: 10%;
+	margin-left: 3%;
 	font-size: 20px;
-}
-
-#toolbar{
-	float: left;
-	background-color: #738e90;
-	width: 15%;
-	margin-left: 10%;
-	margin-top: 2%;
-	margin-bottom: 2%;
-	margin-right: 2%;
-	height: 400px;
-	border-radius: 10px;
-}
-
-#content{
-	float: left;
-	margin-top: 2%;
-	background-color: #738e90;
-	border-radius: 10px;
-	width: 63%;
-	height: 400px;
-	margin-bottom: 2%;
 }
 
 #login{
 	background-color: #738e90;
 	width: 40%;
 	height: 300px;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 30%;
 	margin-right: 30%;
 	margin-bottom: 5%;
 	border-radius: 10px;
 }
 
-#login_label{
+#loginLabel{
+	margin-left: 45%;
+	float: left;	
+}
+
+#loginButton{
 	float: left;
-	margin-top: 5%;
-	margin-left: 45%;
-	margin-bottom: 10%;
-	margin-right: 5%; 
-}
-
-#user{
-	margin-bottom: 5%;
-	margin-left: 21%;
-	width: 70%;
-}
-
-#user_label{
-	padding-left: 6%;
-	padding-right: 6%;
-	margin-right: 7%; 
-}
-
-#passwd{
-	margin-left: 21%;
-	width: 70%;
-}
-
-#passwd_label{
-	padding-left: 6%;
-	padding-right: 6%;
-	margin-right: 7%; 
-}
-
-.input_pair label{
-	margin-right: 7%;	
-}
-
-section h1{
-	margin-left: 20%;
-	margin-bottom: 5%;
-}
-
-.input_pair{
-	margin-left: 10%;
-	margin-bottom: 5%;
-}
-
-#reg_button{
-	margin-left: 45%;
-}
-
-.cleaner{
-	clear: both;
-}
-
-#login_button{
 	margin-top: 10%;
 	margin-left: 45%;
+	margin-bottom: 5%;
 }
+
+#lostPasswd{
+	margin-left: 3%;
+}
+
+.inputPair{
+	margin-left: 20%;
+	margin-top: 5%;	
+}
+
+.inputLabel{
+	float: left;
+	width: 25%;
+}
+
+a{
+	text-decoration: none;
+	color: #222 ;
+}
+a:hover{
+	color: blue;
+	background-color: gray;
+}
+
 
 footer{
 	background-color: #738e90;
@@ -221,10 +188,6 @@ footer{
 	height: 160px; 
 }
 
-html{
-	background-image: url("../img/img01.jpg");
-	background-repeat:no-repeat;
-}
 
 #footer_logo{
 	width: 100px;
@@ -241,38 +204,7 @@ html{
 }
 
 #footer_info2{
-	clear: both;
 	margin-left: 50%;
-}
-
-nav ul{
-	margin-top: 40%;
-}
-
-nav ul li{	
-	padding: 0 10%;
-	margin-bottom: 5%;
-}
-
-nav ul li a{
-	text-decoration: none;
-	color: black;
-}
-
-table{
-	margin-top: 5%;
-	margin-left: 5%;
-	border-collapse: collapse;
-	border: 1px solid black;
-}
-
-th,td, caption{
-	border: 1px solid black;
-	background-color: gray;
-	padding: 5%;
-}
-nav ul li:hover{
-	background-color: gray;
 }
 
 /* ==========================================================================
