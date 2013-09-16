@@ -172,7 +172,8 @@ header{
 }
 
 #user_label{
-	width: 50%;
+	padding-left: 6%;
+	padding-right: 6%;
 	margin-right: 7%; 
 }
 
@@ -182,7 +183,27 @@ header{
 }
 
 #passwd_label{
+	padding-left: 6%;
+	padding-right: 6%;
 	margin-right: 7%; 
+}
+
+.input_pair label{
+	margin-right: 7%;	
+}
+
+section h1{
+	margin-left: 20%;
+	margin-bottom: 5%;
+}
+
+.input_pair{
+	margin-left: 10%;
+	margin-bottom: 5%;
+}
+
+#reg_button{
+	margin-left: 45%;
 }
 
 .cleaner{

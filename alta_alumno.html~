@@ -28,21 +28,40 @@
         	<!div class="cleaner"/>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
         </header>
-        <section id="login">
-    		<form>
-    			<h2 id="login_label">Login</h2>
-    			<div class="cleaner" />
-				<div id="user">
-					<label id="user_label">Usuario:</label>
-					<input id="user_input" type="text" name="user"/>
-    			</div>
-    			<div id="passwd">
-					<label id="passwd_label">Password:</label>
-					<input type="password" name="passwd" id="paasswd_input"/>
-    			</div>
-    			<input id="login_button" type="button" value="Entrar" />
-    		</form>
+        <aside id="toolbar">
+        </aside>
+        <section id="content">
+			<h1>Registro de Alumno</h1>
+			<form method="get" action="index.html">
+				<div class="input_pair">
+					<label for="name" >Nombre</label>
+					<input type="text" name="name" id="name" placeholder="Ej. Juan Perez"  />
+				</div>
+				<div class="input_pair">
+					<div class="label_width"><label for="code" >Codigo</label></div>
+					<input type="text" name="code" id="code" placeholder="Ej. 207453132" />
+				</div>
+				<div class="input_pair">
+					<label for="mail" >Email</label>
+					<input type="email" name="mail" id="mail" placeholder="Ej. algo@gmail.com" />
+				</div>
+				<div class="input_pair">
+					<label for="carr" >Carrera</label>
+					<select name="carr" id="carr" >
+						<optgroup label="Ciencias Basicas">
+							<option value="1">Ingenierio Quimico</option>
+							<option value="2">Licenciado en fisica</option>
+						</optgroup>
+						<optgroup label="Computacion y Electronica">
+							<option value="3">Ingenierio en Computacion</option>
+							<option value="4">Licenciado en Informatica</option>
+						</optgroup>
+					</select>
+				</div>
+				<input type="button" value="Registrar" id="reg_button" />
+			</form>
         </section>
+        <div class="cleaner" />
         <footer>
         		<img id="footer_logo" src="./img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
