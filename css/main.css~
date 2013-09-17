@@ -178,8 +178,31 @@ a{
 }
 a:hover{
 	color: blue;
+	background-color: gray;
 }
 
+
+.toolBar{
+	float: left;
+	margin-left: 10%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-right: 2%;
+	background-color: #738e90;
+	width: 16%;
+		height: 400px;
+	border-radius: 10px;
+}
+
+.content{
+	float: left;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #738e90;
+	width: 62%;
+	height: 400px;
+	border-radius: 10px;
+}
 
 footer{
 	background-color: #738e90;
