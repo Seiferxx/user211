@@ -28,17 +28,16 @@
         	<img src="../img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE<h1>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
-        	<div class="cleaner"/>
+        	<div class="cleaner"></div>
         </header>
         <aside class="toolBar">
         	<a href=#>link</a>
         </aside>
         <section class="content">
-        	<h1>Contenido</h1>
         </section>
-        <div class="cleaner"/>
+        <div class="cleaner"></div>
         <footer>
-        		<div class="cleaner" />
+        		<div class="cleaner" ></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"/>

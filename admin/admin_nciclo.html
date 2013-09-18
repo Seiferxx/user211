@@ -12,9 +12,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -25,31 +25,35 @@
 
 
         <header>
-        	<img src="./img/lion_logo.gif" id="header_image"/>
+        	<img src="../img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE<h1>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
         	<div class="cleaner"></div>
         </header>
-        <section id="login">
-			<form>
-				<h2 id="loginLabel">Login</h2>
-				<div class="cleaner"></div>
-				<div class="inputPair">
-					<label class="inputLabel" for="user">Usuario:</label>
-					<input type="text" name="user" id="user"/>
-				</div>
-				<div class="inputPair">
-					<label class="inputLabel" for="passwd">Password:</label>
-					<input type="password" name="passwd" id="passwd"/>
-				</div>
-				<input id="loginButton" type="button" value="Entrar" />
-				<div class="cleaner"></div>
-				<a id="lostPasswd" href=#>Olvide mi contraseña</a>
-			</form>
-		</section>
+        <aside class="toolBar">
+        	<ul>
+        		<li><a href=#>Agregar Ciclo</a></li>
+        		<li><a href=#>Editar Ciclos</a></li>
+        		<li><a href=#>Admin</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Agregar Ciclos Escolares</h1>
+        	<p class="contentText">
+        		Indique los datos correspondientes al nuevo ciclo.
+        	</p>
+        	<div class="cleaner"></div>
+        	<form method="post" class="form1">
+        		<div class="inputPair">
+        		<label class="inputLabel2">Fecha de Inicio</label>
+        		<input type="date" />
+        		</div>
+        	</form>
+        </section>
+        <div class="cleaner"></div>
         <footer>
-        		<div class="cleaner"></div>
-        		<img id="footer_logo" src="./img/udg_logo.png" />
+        		<div class="cleaner" ></div>
+        		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"></div>
         		<h3 id="footer_info2">2013</h3>
@@ -62,9 +66,9 @@
         
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
