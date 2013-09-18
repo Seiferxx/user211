@@ -32,8 +32,7 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>Agregar Ciclo</a></li>
-        		<li><a href=#>Editar Ciclos</a></li>
+        		<li><a href=#>Ciclos</a></li>
         		<li><a href=#>Admin</a></li>
         	</ul>
         </aside>
@@ -45,9 +44,26 @@
         	<div class="cleaner"></div>
         	<form method="post" class="form1">
         		<div class="inputPair">
-        		<label class="inputLabel2">Fecha de Inicio</label>
-        		<input type="date" />
+		    		<label class="inputLabel2">Ciclo escolar:</label>
+		    		<input id="year" type="number" min="2013" />
+		    		<select>
+		    			<option>A</option>
+		    			<option>B</option>
+		    		</select>
         		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Fecha de inicio</label>
+		    		<input type="date" />
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Fecha de fin</label>
+		    		<input type="date" />
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Dias libres</label>
+		    		<input type="date" />
+        		</div>
+        		<input type="button" value="Agregar" />
         	</form>
         </section>
         <div class="cleaner"></div>
@@ -55,7 +71,7 @@
         		<div class="cleaner" ></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
-        		<div class="cleaner"/>
+        		<div class="cleaner"></div>
         		<h3 id="footer_info2">2013</h3>
         </footer>
         
