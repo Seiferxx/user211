@@ -28,48 +28,77 @@
         	<img src="../img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE<h1>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
-        	<div class="cleaner"></div>
+        	<div class="cleaner"><div>
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="admin_ciclo.html">Ciclos</a></li>
+        		<li><a href="admin_nprofe.html">Agregar Profesor</a></li>
         		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Agregar Ciclos Escolares</h1>
-        	<div class="cleaner"></div>
+        	<h1 class="contentTitle">Profesores</h1>
         	<p class="contentText">
-        		Indique los datos correspondientes al nuevo ciclo.
+        		Esta herramienta le permite dar de alta profesores que desee que
+        		puedan agregar y modificar cursos en el sistema.
+        		<br>
+        		<br>
+        		Para registrar un profesor debera crear una cuenta, esta generara
+        		una contraseña aleatoria que sera enviada al correo del profesor.
+        		La contraseña enviada puede ser cambiada en cualquier momento 
+        		desde la interfaz del profesor.
+        		<br>
+        		<br>
+        		A continuacion se muestran los profesores registrados.
         	</p>
-        	<div class="cleaner"></div>
-        	<form method="post" class="form1">
+        	<form class="form1">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox"/></th>
+        					<th>Nombre</th>
+        					<th>Cuenta</th>
+        					<th>Cursos Activos</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Pedro Gomez</td>
+        					<td>pedro.gomez</td>
+        					<td>6</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
+        				</tr>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Alvaro Castro</td>
+        					<td>alvaro.castro</td>
+        					<td>1</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
+        				</tr>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Luis Alcantar</td>
+        					<td>luis.alcantar</td>
+        					<td>2</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
+        				</tr>
+        			</tbody>
+        		</table>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Ciclo escolar:</label>
-		    		<input id="year" type="number" min="2013" />
-		    		<select>
-		    			<option>A</option>
-		    			<option>B</option>
-		    		</select>
+        			<input type="button" value="Eliminar marcados"/>
+        			<input type="button" value="Editar marcados"/>
         		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de inicio</label>
-		    		<input type="date" />
-        		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de fin</label>
-		    		<input type="date" />
-        		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2">Dias libres</label>
-		    		<input type="date" />
-        		</div>
-        		<input class="endButton" type="button" value="Agregar" />
         	</form>
         </section>
         <div class="cleaner"></div>
         <footer>
-        		<div class="cleaner" ></div>
+        		<div class="cleaner"></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"></div>

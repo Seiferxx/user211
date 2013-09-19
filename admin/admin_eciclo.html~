@@ -37,10 +37,9 @@
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Agregar Ciclos Escolares</h1>
-        	<div class="cleaner"></div>
+        	<h1 class="contentTitle">Editar Ciclos Escolares</h1>
         	<p class="contentText">
-        		Indique los datos correspondientes al nuevo ciclo.
+        		Indique los datos correspondientes para modificar el ciclo 2013A
         	</p>
         	<div class="cleaner"></div>
         	<form method="post" class="form1">
@@ -64,7 +63,7 @@
 		    		<label class="inputLabel2">Dias libres</label>
 		    		<input type="date" />
         		</div>
-        		<input class="endButton" type="button" value="Agregar" />
+        		<input class="endButton" type="button" value="Modificar" />
         	</form>
         </section>
         <div class="cleaner"></div>

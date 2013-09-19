@@ -198,6 +198,40 @@ a:hover{
 	margin-top: 5%;
 }
 
+table{
+	float: left;
+	margin-left: 5%;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	width: 150%;
+	background-color: gray;
+	border-collapse: collapse;
+	border:3px solid black;
+}
+
+thead{
+	background-color: #1B4B50;
+}
+
+th{
+	border: 1px solid black;
+}
+
+td{
+	border: 1px solid black;
+	padding-left: 1%;
+	padding-right: 3%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	
+}
+
+.checker{
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 .toolBar{
 	float: left;
 	margin-left: 10%;

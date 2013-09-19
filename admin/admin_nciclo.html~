@@ -32,12 +32,13 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>Ciclos</a></li>
-        		<li><a href=#>Admin</a></li>
+        		<li><a href="admin_ciclo.html">Ciclos</a></li>
+        		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
         	<h1 class="contentTitle">Agregar Ciclos Escolares</h1>
+        	<div class="cleaner"></div>
         	<p class="contentText">
         		Indique los datos correspondientes al nuevo ciclo.
         	</p>
@@ -63,7 +64,7 @@
 		    		<label class="inputLabel2">Dias libres</label>
 		    		<input type="date" />
         		</div>
-        		<input type="button" value="Agregar" />
+        		<input class="endButton" type="button" value="Agregar" />
         	</form>
         </section>
         <div class="cleaner"></div>

@@ -36,8 +36,6 @@
         		<li><a href=#>Profesores</a></li>
         		<li><a href=#>Alumnos</a></li>
         		<li><a href=#>Cursos</a></li>
-        		<li><a href=#>Mensajes</a></li>
-        		<li><a href=#>Base de datos</a></li>
         		<li><a href=#>Documentacion</a></li>
         		<li><a href=#>Configuracion</a></li>
         	</ul>
@@ -60,7 +58,7 @@
         		<div class="cleaner"></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
-        		<div class="cleaner"></div>
+        		<div class="cleaner"></divclass="checker">
         		<h3 id="footer_info2">2013</h3>
         </footer>
         

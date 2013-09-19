@@ -32,39 +32,47 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="admin_ciclo.html">Ciclos</a></li>
+        		<li><a href="admin_profe.html">Profesores</a></li>
         		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Agregar Ciclos Escolares</h1>
+        	<h1 class="contentTitle">Editar Profesores</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Indique los datos correspondientes al nuevo ciclo.
+        		Indique los datos correspondientes al profesor.
         	</p>
         	<div class="cleaner"></div>
         	<form method="post" class="form1">
         		<div class="inputPair">
-		    		<label class="inputLabel2">Ciclo escolar:</label>
-		    		<input id="year" type="number" min="2013" />
-		    		<select>
-		    			<option>A</option>
-		    			<option>B</option>
-		    		</select>
+		    		<label class="inputLabel2">Nombre:</label>
+		    		<input type="text" placeholder="Ej.Pedro Perez Lopez"/>
         		</div>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de inicio</label>
-		    		<input type="date" />
+		    		<label class="inputLabel2">Cuenta:</label>
+		    		<input type="text" placeholder="Ej.pedro.perez"/>
         		</div>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de fin</label>
-		    		<input type="date" />
+		    		<label class="inputLabel2">Telefono:</label>
+		    		<input type="tel" placeholder="Ej.10283726"/>
         		</div>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Dias libres</label>
-		    		<input type="date" />
+		    		<label class="inputLabel2">Codigo:</label>
+		    		<input type="tel" placeholder="Ej.207453132"/>
         		</div>
-        		<input class="endButton" type="button" value="Agregar" />
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Correo:</label>
+		    		<input type="text" placeholder="Ej.correo@mail.com"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Contraseña:</label>
+		    		<input type="password" />
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Repetir contraseña:</label>
+		    		<input type="password" />
+        		</div>
+        		<input class="endButton" type="button" value="Modificar" />
         	</form>
         </section>
         <div class="cleaner"></div>
