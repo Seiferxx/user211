@@ -32,14 +32,68 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>link</a></li>
+        		<li><a href=#>Alumno</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Titulo</h1>
+        	<h1 class="contentTitle">Lista de Calificaciones</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
+        		Esta tabla muestra la lista de calificaciones publicada por el
+        		profesor a cargo de "Sistemas Expertos".
         	</p>
+        	<form class="form1">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th>Ciclo escolar</th>
+        					<th>Nombre</h>
+        					<th>Actividad 1</h>
+        					<th>Actividad 2</h>
+        					<th>Total</h>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td rowspan="6">2013A</td>
+        					<th>Luis Alfonso Cardenas</h>
+        					<th>75</h>
+        					<th>100</h>
+        					<th>60</h>
+        				</tr>
+        				<tr>
+        					<th>Jose Jimenez</h>
+        					<th>100</h>
+        					<th>100</h>
+        					<th>100</h>
+        				</tr>
+        				<tr>
+        					<th>Pedro Paramo</h>
+        					<th>80</h>
+        					<th>95</h>
+        					<th>85</h>
+        				</tr>
+        				<tr>
+        					<th>Dios Eolo</h>
+        					<th>60</h>
+        					<th>75</h>
+        					<th>55</h>
+        				</tr>
+        				<tr>
+        					<th>Jose Soñador</h>
+        					<th>55</h>
+        					<th>100</h>
+        					<th>80</h>
+        				</tr>
+        				<tr>
+        					<th>R2D2</h>
+        					<th>75</h>
+        					<th>100</h>
+        					<th>60</h>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</form>
         </section>
         <div class="cleaner"></div>
         <footer>

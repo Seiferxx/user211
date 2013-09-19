@@ -32,14 +32,45 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>link</a></li>
+        		<li><a href=#>Programacion Web</a></li>
+        		<li><a href=#>Sistemas Expertos</a></li>
+        		<li><a href="alumno_curso.html">Alumno</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Titulo</h1>
+        	<h1 class="contentTitle">Cursos</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
+        		A continuacion se muestra una lista con los cursos en los que estas inscrito,
+        		selecciona uno para revisar tus avances y asistencia.
         	</p>
+        	<form class="form1">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox"/></th>
+        					<th>Ciclo escolar</th>
+        					<th>Lista de Asistencias</th>
+        					<th>Calficaciones</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Programacion Web</td>
+        					<td><input type="button" value="Lista"/></td>
+        					<td><input type="button" value="Calificaciones"/></td>
+        				</tr>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Sistemas Expertos</td>
+        					<td><input type="button" value="Lista"/></td>
+        					<td><input type="button" value="Calificaciones"/></td>
+        				</tr>
+        			</tbody>
+        		</table>
+        		<input type="button" class="endButton" value="Desmatricularse"/>
+        	</form>
         </section>
         <div class="cleaner"></div>
         <footer>

@@ -37,7 +37,7 @@
         		<div class="cleaner" ></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
-        		<div class="cleaner"/>
+        		<div class="cleaner"></div>
         		<h3 id="footer_info2">2013</h3>
         </footer>
         

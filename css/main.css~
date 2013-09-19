@@ -169,10 +169,6 @@ header{
 	margin-top: 5%;	
 }
 
-button{
-	background-color: black;
-}
-
 .inputLabel{
 	float: left;
 	width: 25%;
@@ -251,6 +247,7 @@ td{
 	margin-right: 2%;
 	background-color: #738e90;
 	width: 16%;
+	height: 10%;
 	border-radius: 10px;
 }
 

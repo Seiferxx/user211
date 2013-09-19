@@ -32,8 +32,8 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>Cursos</a></li>
-        		<li><a href=#></a></li>
+        		<li><a href="alumno_curso.html">Cursos</a></li>
+        		<li><a href="alumno_config.html">Configuracion</a></li>
         	</ul>
         </aside>
         <section class="content">

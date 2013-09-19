@@ -32,14 +32,26 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>link</a></li>
+        		<li><a href="profe_curso.html">Cursos</a></li>
+        		<li><a href="profe_alumno.html">Alumnos</a></li>
+        		<li><a href="alumno_config.html">Configuracion</a></li>
+        		<li><a href="index.html">Salir</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Titulo</h1>
+        	<h1 class="contentTitle">Bienvenido a SUCE</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        	</p>
+        		Bienvenido Profesor, desde esta aplicacion podras darle seguimiento a
+        		las evaluaciones de tus alumnos y llevar un control del record de 
+        		asistencias.
+        		<br>
+        		<br>
+        		Usa la barra lateral para consultar los rubros referentes a cursos y
+        		calificaciones y tambien para actualizar la informacion de tu cuenta.
+        		Si tienes alguna duda o comentario, dirigete a tu profesor y pidele
+        		que contacte al administrador del sistema.
+        	</p> 
         </section>
         <div class="cleaner"></div>
         <footer>

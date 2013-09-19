@@ -32,14 +32,79 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>link</a></li>
+        		<li><a href="#">Programacion Web</a></li>
+        		<li><a href="#">Sistemas Expertos</a></li>
+        		<li><a href="alumno_home.html">Alumno</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Titulo</h1>
+        	<h1 class="contentTitle">Lista de Asistencia</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
+        		Lista de asistencia de el curso "Programacion Web".
+        		<br>
+        		<br>
+        		X simboliza asistencia.
+        		<br>
+        		- simboliza falta.
         	</p>
+        	<form class="form1">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th>Ciclo escolar</th>
+        					<th>19/08/2013</h>
+        					<th>21/08/2013</h>
+        					<th>26/08/2013</h>
+        					<th>Nombre</h>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td>2013A</td>
+        					<th>X</h>
+        					<th>-</h>
+        					<th><input type="checkbox"/></h>
+        					<th>Luis Alfonso Cardenas</h>
+        				</tr>
+        				<tr>
+        					<td>2013A</td>
+        					<th>X</h>
+        					<th>X</h>
+        					<th>X</h>
+        					<th>Jose Jimenez</h>
+        				</tr>
+        				<tr>
+        					<td>2013A</td>
+        					<th>-</h>
+        					<th>-</h>
+        					<th>X</h>
+        					<th>Pedro Paramo</h>
+        				</tr>
+        				<tr>
+        					<td>2013A</td>
+        					<th>X</h>
+        					<th>-</h>
+        					<th>-</h>
+        					<th>Dios Eolo</h>
+        				</tr>
+        				<tr>
+        					<td>2013A</td>
+        					<th>X</h>
+        					<th>X</h>
+        					<th>X</h>
+        					<th>Jose Soñador</h>
+        				</tr>
+        				<tr>
+        					<td>2013A</td>
+        					<th>X</h>
+        					<th>-</h>
+        					<th>X</h>
+        					<th>R2D2</h>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</form>
         </section>
         <div class="cleaner"></div>
         <footer>
