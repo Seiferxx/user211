@@ -169,6 +169,10 @@ header{
 	margin-top: 5%;	
 }
 
+button{
+	background-color: black;
+}
+
 .inputLabel{
 	float: left;
 	width: 25%;
@@ -177,6 +181,11 @@ header{
 .inputLabel2{
 	float: left;
 	width: 40%;
+}
+
+.inputLabel3{
+	float: left;
+	margin-right: 5%;
 }
 
 #year{
@@ -215,6 +224,8 @@ thead{
 
 th{
 	border: 1px solid black;
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 td{

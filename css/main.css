@@ -179,6 +179,11 @@ header{
 	width: 40%;
 }
 
+.inputLabel3{
+	float: left;
+	margin-right: 5%;
+}
+
 #year{
 	width: 20%;
 }

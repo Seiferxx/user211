@@ -28,66 +28,72 @@
         	<img src="../img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE<h1>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
-        	<div class="cleaner"><div>
+        	<div class="cleaner"></div>
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="admin_nciclo.html">Agregar Ciclo</a></li>
+        		<li><a href="admin_profe.html">Alumnos</a></li>
         		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Ciclos Escolares</h1>
+        	<h1 class="contentTitle">Agregar Alumnos</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Esta herramienta le permite agregar ciclos escolares para ser usados por
-        		profesores, para cada curso se debe indicar la fecha de inicio y
-        		termino y los dias en los que no habra clases incluyendo una breve
-        		explicacion sobre las causas.
-        		<br>
-        		<br>
-        		A continuacion se muestran los ciclos registrados.
+        		Indique los datos correspondientes al alumno.
         	</p>
-        	<form class="form1">
-        		<table>
-        			<thead>
-        				<tr>
-        					<th><input type="checkbox"/></th>
-        					<th>Ciclo escolar</th>
-        					<th>Editar</th>
-        					<th>Eliminar</th>
-        				</tr>
-        			</thead>
-        			<tbody>
-        				<tr>
-        					<td class="checker"><input type="checkbox"/></td>
-        					<td>2013A</td>
-        					<td><input type="button" value="Editar"/></td>
-        					<td><input type="button" value="Eliminar"/></td>
-        				</tr>
-        				<tr>
-        					<td class="checker"><input type="checkbox"/></td>
-        					<td>2013B</td>
-        					<td><input type="button" value="Editar"/></td>
-        					<td><input type="button" value="Eliminar"/></td>
-        				</tr>
-        				<tr>
-        					<td class="checker"><input type="checkbox"/></td>
-        					<td>2014A</td>
-        					<td><input type="button" value="Editar"/></td>
-        					<td><input type="button" value="Eliminar"/></td>
-        				</tr>
-        			</tbody>
-        		</table>
+        	<div class="cleaner"></div>
+        	<form method="post" class="form1">
         		<div class="inputPair">
-        			<input type="button" value="Eliminar marcados"/>
-        			<input type="button" value="Editar marcados"/>
+		    		<label class="inputLabel2">Nombre:</label>
+		    		<input type="text" placeholder="Ej.Pedro Perez Lopez"/>
         		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Cuenta:</label>
+		    		<input type="text" placeholder="Ej.pedro.perez"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Telefono:</label>
+		    		<input type="tel" placeholder="Ej.10283726"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Codigo:</label>
+		    		<input type="tel" placeholder="Ej.207453132"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Carrera:</label>
+		    		<select>
+		    			<optgroup label="Electronica y Computacion">
+		    				<option>Computacion</option>
+		    				<option>Informatica</option>
+		    				<option>Biomedica</option>
+		    				<option>Electronica</option>
+		    			</optgroup>
+		    			<optgroup label="Ciencias Basicas">
+		    				<option>Matematicas</option>
+		    				<option>Fisica</option>
+		    			</optgroup>
+		    			<optgroup label="Ingenierias">
+		    				<option>Civil</option>
+		    				<option>Industrial</option>
+		    			</optgroup>
+		    		</select>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Correo:</label>
+		    		<input type="text" placeholder="Ej.correo@mail.com"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Opcionales:</label>
+		    		<input type="text" />
+		    		<input type="checkbox" />
+        		</div>
+        		<input class="endButton" type="button" value="Agregar" />
         	</form>
         </section>
         <div class="cleaner"></div>
         <footer>
-        		<div class="cleaner"></div>
+        		<div class="cleaner" ></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"></div>

@@ -43,9 +43,9 @@
 					<input type="password" name="passwd" id="passwd"/>
 				</div>
 				<input id="loginButton" type="button" value="Entrar" />
+				<div class="cleaner"></div>
 				<a id="lostPasswd" href=#>Olvide mi contraseña</a>
 			</form>
-			<div class="cleaner"></div>
 		</section>
         <footer>
         		<div class="cleaner"></div>

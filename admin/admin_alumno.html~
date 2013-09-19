@@ -32,28 +32,35 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="admin_nciclo.html">Agregar Ciclo</a></li>
+        		<li><a href="admin_nalumno.html">Agregar Alumnos</a></li>
+        		<li><a href="admin_calumno.html">Agregar Alumnos</a></li>
         		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Ciclos Escolares</h1>
+        	<h1 class="contentTitle">Alumnos</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Esta herramienta le permite agregar ciclos escolares para ser usados por
-        		profesores, para cada curso se debe indicar la fecha de inicio y
-        		termino y los dias en los que no habra clases incluyendo una breve
-        		explicacion sobre las causas.
+        		Esta herramienta le permite agregar a los alumnos que participan
+        		en los grupos que crean los profesores, tenga en cuenta que es 
+        		mas util que un profesor recabe los nombres de sus alumnos y los
+        		registre desde su cuenta y los ponga como activos en el sistema
+        		que lo haga el administrador.
+        		<br>	
+        		Su uso es simplemente para resolver los problemas relacionados con 
+        		agregar alumnos a grupos o editar y dar de baja alumnos.
         		<br>
         		<br>
-        		A continuacion se muestran los ciclos registrados.
+        		A continuacion se muestran los alumnos registrados.
         	</p>
         	<form class="form1">
         		<table>
         			<thead>
         				<tr>
         					<th><input type="checkbox"/></th>
-        					<th>Ciclo escolar</th>
+        					<th>Nombre</th>
+        					<th>Cuenta</th>
+        					<th>Cursos Activos</th>
         					<th>Editar</th>
         					<th>Eliminar</th>
         				</tr>
@@ -61,19 +68,25 @@
         			<tbody>
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
-        					<td>2013A</td>
+        					<td>Ramiro Valencia</td>
+        					<td>123456789</td>
+        					<td>1</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
-        					<td>2013B</td>
+        					<td>Ramiro Ramirez Ramirez</td>
+        					<td>888888888</td>
+        					<td>3</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
-        					<td>2014A</td>
+        					<td>Perengano Lopez</td>
+        					<td>207453132</td>
+        					<td>3</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
