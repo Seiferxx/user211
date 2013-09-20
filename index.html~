@@ -36,7 +36,7 @@
 				<div class="cleaner"></div>
 				<div class="inputPair">
 					<label class="inputLabel" for="user">Usuario:</label>
-					<input type="text" name="user" id="user"/>
+					<input class="inputText" type="text" name="user" id="user"/>
 				</div>
 				<div class="inputPair">
 					<label class="inputLabel" for="passwd">Password:</label>
@@ -44,7 +44,7 @@
 				</div>
 				<input id="loginButton" type="button" value="Entrar" />
 				<div class="cleaner"></div>
-				<a id="lostPasswd" href=#>Olvide mi contraseña</a>
+				<a id="lostPasswd" href="lost_password.html">Olvide mi contraseña</a>
 			</form>
 		</section>
         <footer>
