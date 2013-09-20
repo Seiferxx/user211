@@ -93,7 +93,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
 html{
 	background-image: url("../img/img01.jpg");
 	background-repeat:repeat;
@@ -316,38 +315,6 @@ footer{
 
 #footer_info2{
 	margin-left: 50%;
-}
-
-@media (max-width: 320px){
-	header{
-		display: none;
-	}
-	#login{
-		background-color: #738e90;
-		width: 95%;
-		margin-top: 2%;
-		margin-left: 2%;
-		margin-right: 2%;
-		margin-bottom: 5%;
-		border-radius: 10px;
-	}
-	#loginLabel{
-		margin-left: 30%;
-	}
-	.inputLabel{
-		font-size: 80%;
-	}
-	.inputText{
-		width: 80%;
-	}
-	#loginButton{
-		margin-left: 30%;
-	}
-	#lostPasswd{
-		font-size: 80%;
-	}
-	
-		
 }
 
 /* ==========================================================================
