@@ -32,67 +32,63 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="profe_home.html">Profe</a></li>
+        		<li><a href="profe_alumno.html">Alumnos</a></li>
+        		<li><a href="profe_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Lista de Calificaciones</h1>
+        	<h1 class="contentTitle">Agregar Alumnos</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Esta tabla muestra la lista de calificaciones publicada por el
-        		profesor a cargo de "Sistemas Expertos".
+        		Indique los datos correspondientes al alumno.
         	</p>
-        	<form class="form1">
-        		<table>
-        			<thead>
-        				<tr>
-        					<th>Ciclo escolar</th>
-        					<th>Nombre</h>
-        					<th>Actividad 1</h>
-        					<th>Actividad 2</h>
-        					<th>Total</h>
-        				</tr>
-        			</thead>
-        			<tbody>
-        				<tr>
-        					<td rowspan="6">2013A</td>
-        					<th>Luis Alfonso Cardenas</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
-        				</tr>
-        				<tr>
-        					<th>Jose Jimenez</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>100</h>
-        				</tr>
-        				<tr>
-        					<th>Pedro Paramo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>85</h>
-        				</tr>
-        				<tr>
-        					<th>Dios Eolo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>55</h>
-        				</tr>
-        				<tr>
-        					<th>Jose Soñador</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>80</h>
-        				</tr>
-        				<tr>
-        					<th>R2D2</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
-        				</tr>
-        			</tbody>
-        		</table>
+        	<div class="cleaner"></div>
+        	<form method="post" class="form1">
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Nombre:</label>
+		    		<input type="text" placeholder="Ej.Pedro Perez Lopez"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Cuenta:</label>
+		    		<input type="text" placeholder="Ej.pedro.perez"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Telefono:</label>
+		    		<input type="tel" placeholder="Ej.10283726"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Codigo:</label>
+		    		<input type="tel" placeholder="Ej.207453132"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Carrera:</label>
+		    		<select>
+		    			<optgroup label="Electronica y Computacion">
+		    				<option>Computacion</option>
+		    				<option>Informatica</option>
+		    				<option>Biomedica</option>
+		    				<option>Electronica</option>
+		    			</optgroup>
+		    			<optgroup label="Ciencias Basicas">
+		    				<option>Matematicas</option>
+		    				<option>Fisica</option>
+		    			</optgroup>
+		    			<optgroup label="Ingenierias">
+		    				<option>Civil</option>
+		    				<option>Industrial</option>
+		    			</optgroup>
+		    		</select>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Correo:</label>
+		    		<input type="text" placeholder="Ej.correo@mail.com"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Opcionales:</label>
+		    		<input type="text" />
+		    		<input type="checkbox" />
+        		</div>
+        		<input class="endButton" type="button" value="Agregar" />
         	</form>
         </section>
         <div class="cleaner"></div>

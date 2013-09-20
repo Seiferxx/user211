@@ -32,9 +32,9 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href=#>Programacion Web</a></li>
+        		<li><a href="lista_fija.html">Programacion Web</a></li>
         		<li><a href=#>Sistemas Expertos</a></li>
-        		<li><a href="alumno_curso.html">Alumno</a></li>
+        		<li><a href="alumno_home.html">Alumno</a></li>
         	</ul>
         </aside>
         <section class="content">

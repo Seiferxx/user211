@@ -34,6 +34,7 @@
         	<ul>
         		<li><a href="alumno_curso.html">Cursos</a></li>
         		<li><a href="alumno_config.html">Configuracion</a></li>
+        		<li><a href="../index.html">Salir</a></li>
         	</ul>
         </aside>
         <section class="content">

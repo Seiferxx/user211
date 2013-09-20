@@ -193,7 +193,7 @@ a{
 	color: #222 ;
 }
 a:hover{
-	color: blue;
+	color: purple;
 	background-color: gray;
 }
 
@@ -247,7 +247,6 @@ td{
 	margin-right: 2%;
 	background-color: #738e90;
 	width: 16%;
-	height: 10%;
 	border-radius: 10px;
 }
 

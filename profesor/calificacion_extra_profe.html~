@@ -32,7 +32,7 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="profe_home.html">Profe</a></li>
+        		<li><a href="profe_home.html">Profesor</a></li>
         	</ul>
         </aside>
         <section class="content">
@@ -41,6 +41,7 @@
         	<p class="contentText">
         		Esta tabla muestra la lista de calificaciones publicada por el
         		profesor a cargo de "Sistemas Expertos".
+        		Esta es una hoja extra para el rubro de calificacion "Proyecto".
         	</p>
         	<form class="form1">
         		<table>
@@ -48,8 +49,8 @@
         				<tr>
         					<th>Ciclo escolar</th>
         					<th>Nombre</h>
-        					<th>Actividad 1</h>
-        					<th>Actividad 2</h>
+        					<th>Rubro1</h>
+        					<th>Rubro2</h>
         					<th>Total</h>
         				</tr>
         			</thead>

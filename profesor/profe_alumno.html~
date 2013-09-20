@@ -28,76 +28,73 @@
         	<img src="../img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE<h1>
         	<h4 id="header_2"">Sistema Universitario de Control Escolar</h4>
-        	<div class="cleaner"></div>
+        	<div class="cleaner"><div>
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="profe_home.html">Profe</a></li>
+        		<li><a href="admin_nalumno.html">Agregar Alumnos</a></li>
+        		<li><a href="admin_calumno.html">Importar CSV</a></li>
+        		<li><a href="admin_home.html">Profe</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Lista de Calificaciones</h1>
+        	<h1 class="contentTitle">Alumnos</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Esta tabla muestra la lista de calificaciones publicada por el
-        		profesor a cargo de "Sistemas Expertos".
+        		Esta herramienta le permite agregar a los alumnos que participan
+        		en los grupos que crea.
+        		<br>
+        		<br>
+        		A continuacion se muestran los alumnos registrados.
         	</p>
         	<form class="form1">
         		<table>
         			<thead>
         				<tr>
-        					<th>Ciclo escolar</th>
-        					<th>Nombre</h>
-        					<th>Actividad 1</h>
-        					<th>Actividad 2</h>
-        					<th>Total</h>
+        					<th><input type="checkbox"/></th>
+        					<th>Nombre</th>
+        					<th>Cuenta</th>
+        					<th>Cursos Activos</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
         				</tr>
         			</thead>
         			<tbody>
         				<tr>
-        					<td rowspan="6">2013A</td>
-        					<th>Luis Alfonso Cardenas</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Ramiro Valencia</td>
+        					<td>123456789</td>
+        					<td>1</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
-        					<th>Jose Jimenez</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>100</h>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Ramiro Ramirez Ramirez</td>
+        					<td>888888888</td>
+        					<td>3</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
-        					<th>Pedro Paramo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>85</h>
-        				</tr>
-        				<tr>
-        					<th>Dios Eolo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>55</h>
-        				</tr>
-        				<tr>
-        					<th>Jose Soñador</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>80</h>
-        				</tr>
-        				<tr>
-        					<th>R2D2</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>Perengano Lopez</td>
+        					<td>207453132</td>
+        					<td>3</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         			</tbody>
         		</table>
+        		<div class="inputPair">
+        			<input type="button" value="Eliminar marcados"/>
+        			<input type="button" value="Editar marcados"/>
+        		</div>
         	</form>
         </section>
         <div class="cleaner"></div>
         <footer>
-        		<div class="cleaner" ></div>
+        		<div class="cleaner"></div>
         		<img id="footer_logo" src="../img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"></div>

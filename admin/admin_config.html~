@@ -32,67 +32,34 @@
         </header>
         <aside class="toolBar">
         	<ul>
-        		<li><a href="profe_home.html">Profe</a></li>
+        		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
         <section class="content">
-        	<h1 class="contentTitle">Lista de Calificaciones</h1>
+        	<h1 class="contentTitle">Configuracion</h1>
         	<div class="cleaner"></div>
         	<p class="contentText">
-        		Esta tabla muestra la lista de calificaciones publicada por el
-        		profesor a cargo de "Sistemas Expertos".
+        		Aqui puede configurar los parametros de su cuenta.
         	</p>
+        	<div class="cleaner"></div>
+        	<p style="margin-left: 3%; float: left;">
+        		<h4>Cambiar Contraseña</h4>
+        	</p>
+        	<div class="cleaner"></div>
         	<form class="form1">
-        		<table>
-        			<thead>
-        				<tr>
-        					<th>Ciclo escolar</th>
-        					<th>Nombre</h>
-        					<th>Actividad 1</h>
-        					<th>Actividad 2</h>
-        					<th>Total</h>
-        				</tr>
-        			</thead>
-        			<tbody>
-        				<tr>
-        					<td rowspan="6">2013A</td>
-        					<th>Luis Alfonso Cardenas</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
-        				</tr>
-        				<tr>
-        					<th>Jose Jimenez</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>100</h>
-        				</tr>
-        				<tr>
-        					<th>Pedro Paramo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>85</h>
-        				</tr>
-        				<tr>
-        					<th>Dios Eolo</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>55</h>
-        				</tr>
-        				<tr>
-        					<th>Jose Soñador</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>80</h>
-        				</tr>
-        				<tr>
-        					<th>R2D2</h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th><input type="number" min="0" max="100"></h>
-        					<th>60</h>
-        				</tr>
-        			</tbody>
-        		</table>
+        		<div class="inputPair">
+					<label class="inputLabel2">Contraseña actual</label>
+					<input type="password" />
+        		</div>
+        		<div class="inputPair">
+					<label class="inputLabel2">Contraseña nueva</label>
+					<input type="password" />
+        		</div>
+        		<div class="inputPair">
+					<label class="inputLabel2">Repetir Contraseña</label>
+					<input type="password" />
+        		</div>
+        		<input class="endButton" type="button" value="Cambiar" />
         	</form>
         </section>
         <div class="cleaner"></div>
