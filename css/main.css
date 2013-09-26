@@ -185,7 +185,7 @@ header{
 }
 
 #year{
-	width: 20%;
+	width: 20%;Mobile portrait (320x480)
 }
 
 a{
@@ -208,9 +208,8 @@ table{
 	margin-left: 5%;
 	margin-bottom: 5%;
 	margin-top: 5%;
-	width: 150%;
+	width: 85%;
 	background-color: gray;
-	border-collapse: collapse;
 	border:3px solid black;
 }
 
@@ -317,6 +316,93 @@ footer{
 	margin-left: 50%;
 }
 
+
+
+@media screen and ( max-width:320px ){
+	header{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	#header_image{
+		width: 50px;
+		height: 50px;
+	}
+	
+	#header_1{
+		font-size: 40px;
+	}
+	
+	#header_2{
+		display:none;
+	}
+	
+	#login{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	#loginLabel{
+		margin-left: 40%;
+	}
+	
+	#loginButton{
+		margin-left: 40%;
+	}
+	
+	.inputPair{
+		margin-left: 15%;
+	}
+	
+	.content_f{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	.content{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	.toolBar{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}	
+
+	h1{
+		font-size: 18px;
+	}
+	
+	.form{
+		width: 98%;
+		margin-left: 1%
+	}
+	
+	footer{
+		height: 80px;
+	}
+	
+	#footer_logo{
+		width: 50px;
+		height: 50px;
+		margin-left: 5%;
+	}
+	#footer_info{
+		font-size: 17px;
+	}
+	#footer_info2{
+		display: none;
+	}
+	
+	ul{
+		list-style-type: circle;
+	}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -408,6 +494,7 @@ footer{
 .clearfix:after {
     clear: both;
 }
+Universidad de Guadalajara
 
 /*
  * For IE 6/7 only
