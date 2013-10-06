@@ -13,6 +13,26 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+        	function selectAll( ){
+        		var i = 0;
+        		document.getElementById( "master" );
+        		if( master.checked ){
+        			for( i = 0 ; i < document.form.elements.length; i++ ){
+        				if( document.form.elements[i].type == "checkbox"){
+        					document.form.elements[i].checked = 1; 
+        				}
+        			}
+        		}
+        		else{
+        			for( i = 0 ; i < document.form.elements.length; i++ ){
+        				if( document.form.elements[i].type == "checkbox"){
+        					document.form.elements[i].checked = 0; 
+        				}
+        			}
+        		}
+        	}
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -47,14 +67,14 @@
         		<br>
         		A continuacion se muestran los alumnos registrados.
         	</p>
-        	<form class="form1">
+        	<form class="form1" name="form" method="post" action="">
         		<table>
         			<thead>
         				<tr>
-        					<th><input type="checkbox"/></th>
+        					<th><input type="checkbox" onclick="selectAll( )" id="master"/></th>
         					<th>Nombre</th>
-        					<th>Cuenta</th>
-        					<th>Cursos Activos</th>
+        					<th class="hidden320">Cuenta</th>
+        					<th class="hidden320">Cursos Activos</th>
         					<th>Editar</th>
         					<th>Eliminar</th>
         				</tr>
@@ -63,32 +83,32 @@
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
         					<td>Ramiro Valencia</td>
-        					<td>123456789</td>
-        					<td>1</td>
+        					<td class="hidden320">123456789</td>
+        					<td class="hidden320">1</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
         					<td>Ramiro Ramirez Ramirez</td>
-        					<td>888888888</td>
-        					<td>3</td>
+        					<td class="hidden320">888888888</td>
+        					<td class="hidden320">3</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
         					<td class="checker"><input type="checkbox"/></td>
         					<td>Perengano Lopez</td>
-        					<td>207453132</td>
-        					<td>3</td>
+        					<td class="hidden320">207453132</td>
+        					<td class="hidden320">3</td>
         					<td><input type="button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         			</tbody>
         		</table>
         		<div class="inputPair">
-        			<input type="button" value="Eliminar marcados"/>
-        			<input type="button" value="Editar marcados"/>
+        			<input type="button" value="Eliminar marcados" id="deleteMarked" name="deleteMarked"/>
+        			<input type="button" value="Editar marcados" id="editMarked" name="editMarked"/>
         		</div>
         	</form>
         </section>

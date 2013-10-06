@@ -239,7 +239,6 @@ td{
 	padding-right: 3%;
 	padding-top: 1%;
 	padding-bottom: 1%;
-	
 }
 
 .checker{
@@ -336,6 +335,9 @@ footer{
 		margin-right: 2.3%;
 	}
 	
+	.hidden320{
+		display: none;
+	}
 	
 	#header_image{
 		width: 50px;
@@ -422,6 +424,10 @@ footer{
 		width: 95%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
+	}
+	
+	.hidden320{
+		display: none;
 	}
 	
 	#header_image{

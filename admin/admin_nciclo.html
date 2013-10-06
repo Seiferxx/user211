@@ -39,26 +39,22 @@
         		Indique los datos correspondientes al nuevo ciclo.
         	</p>
         	<div class="cleaner"></div>
-        	<form method="post" class="form1">
+        	<form method="post" class="form1" action="">
         		<div class="inputPair">
-		    		<label class="inputLabel2">Ciclo escolar:</label>
-		    		<input id="year" type="number" min="2013" />
+		    		<label class="inputLabel2" for="year">Ciclo escolar:</label>
+		    		<input id="year" name="year" type="number" min="2013" />
 		    		<select>
 		    			<option>A</option>
 		    			<option>B</option>
 		    		</select>
         		</div>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de inicio</label>
-		    		<input type="date" />
+		    		<label class="inputLabel2" for="init">Fecha de inicio</label>
+		    		<input type="date" id="init" name="init" />
         		</div>
         		<div class="inputPair">
-		    		<label class="inputLabel2">Fecha de fin</label>
-		    		<input type="date" />
-        		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2">Dias libres</label>
-		    		<input type="date" />
+		    		<label class="inputLabel2" for="end">Fecha de fin</label>
+		    		<input type="date" id="end" name="end" />
         		</div>
         		<input class="endButton" type="button" value="Agregar" />
         	</form>

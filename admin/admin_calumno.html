@@ -13,6 +13,29 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+        	function validate( ){
+        		if( document.getElementById( "errorLine" ) == null ){
+					var cleaner = document.createElement( "div" );
+					var err = document.createElement( "p" );
+					var button = document.getElementById( "endButton" );
+					cleaner.setAttribute( "class", "cleaner" );
+					err.setAttribute( "class", "errorLine" );
+					err.setAttribute( "id", "errorLine" );
+					err.appendChild( document.createTextNode( "" ) );
+					button.parentNode.appendChild( cleaner );
+					button.parentNode.appendChild( err );
+				}
+        		var file = document.getElementById( "file" );
+        		var err = document.getElementById( "errorLine" );
+        		if( file.value.length == 0 ){
+        			err.replaceChild( document.createTextNode( "Selecciona un archivo" ), err.firstChild );
+        		}
+        		else{
+        			location.href="admin_alumno.html";
+        		}
+        	}
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,6 +49,7 @@
         </header>
         <aside class="toolBar">
         	<ul>
+        		<li><a href="admin_alumno.html">Alumnos</a></li>
         		<li><a href="admin_home.html">Admin</a></li>
         	</ul>
         </aside>
@@ -39,8 +63,9 @@
         	<form class="form1">
         		<div class="inputPair">
         			<label class="inputLabel">Archivo:</label>
-        			<input type="text"/>
+        			<input type="file" id="file" name="file"/>
         		</div>
+        		<input type="button" value="Subir"class="endButton" id="endButton" onclick="validate( )"/>
         	</form>
         </section>
         <div class="cleaner"></div>
@@ -55,7 +80,6 @@
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="../js/plugins.js"></script>
         <script src="../js/main.js"></script>
-
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
