@@ -15,6 +15,43 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+		<script>
+
+			function validator( ){
+				if( document.getElementById( "errorLine" ) == null ){
+					var title = document.getElementById( "loginLabel" );
+					var cleaner = document.createElement( "div" );
+					var err = document.createElement( "p" );
+					cleaner.setAttribute( "class", "cleaner" );
+					err.setAttribute( "class", "errorLine" );
+					err.setAttribute( "id", "errorLine" );
+					err.appendChild( document.createTextNode( "" ) );
+					title.parentNode.insertBefore( cleaner );
+					title.parentNode.insertBefore( err );
+				}
+				var errLine = document.getElementById( "errorLine" );
+				var usr = document.getElementById( "user" );
+				var passwd = document.getElementById( "passwd" );
+				var regex = "[0-9a-zA-z]+";
+				var error1 = document.createTextNode( "Usuario invalido" );
+				var error2 = document.createTextNode( "Debes especificar un nombre de usuario" );
+				var error3 = document.createTextNode( "Debes especificar una contraseña" );
+				if ( usr.value.match( regex ) == null){
+					if( usr.value.length == 0 ){
+						errLine.replaceChild( error2, errLine.firstChild );
+					}
+					else{
+						errLine.replaceChild(  error1, errLine.firstChild );
+					}
+				}
+				else if( passwd.value.length == 0 ){
+					errLine.replaceChild( error3, errLine.firstChild );
+				} 
+			}
+		</script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -42,7 +79,7 @@
 					<label class="inputLabel" for="passwd">Password:</label>
 					<input type="password" name="passwd" id="passwd"/>
 				</div>
-				<input id="loginButton" type="button" value="Entrar" />
+				<input id="loginButton" type="button" value="Entrar" onclick="validator()" />
 				<div class="cleaner"></div>
 				<a id="lostPasswd" href="lost_password.html">Olvide mi contraseña</a>
 			</form>
