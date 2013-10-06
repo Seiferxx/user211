@@ -16,20 +16,20 @@
 		<script>
 			function validator( ){
 				if( document.getElementById( "errorLine" ) == null ){
-					var title = document.getElementById( "loginLabel" );
+					var title = document.getElementById( "lostPasswd" );
 					var cleaner = document.createElement( "div" );
 					var err = document.createElement( "p" );
 					cleaner.setAttribute( "class", "cleaner" );
 					err.setAttribute( "class", "errorLine" );
 					err.setAttribute( "id", "errorLine" );
 					err.appendChild( document.createTextNode( "" ) );
-					title.parentNode.insertBefore( cleaner );
-					title.parentNode.insertBefore( err );
+					title.parentNode.insertBefore( err, title.nextSibling );
+					title.parentNode.insertBefore( cleaner, title.nextSibling );
 				}
 				var errLine = document.getElementById( "errorLine" );
 				var usr = document.getElementById( "user" );
 				var passwd = document.getElementById( "passwd" );
-				var regex = "[0-9a-zA-z]+";
+				var regex = /\w+\.\w+/;
 				var error1 = document.createTextNode( "Usuario invalido" );
 				var error2 = document.createTextNode( "Debes especificar un nombre de usuario" );
 				var error3 = document.createTextNode( "Debes especificar una contraseña" );
@@ -61,7 +61,7 @@
         	<div class="cleaner"></div>
         </header>
         <section id="login">
-			<form>
+			<form method="post" action="">
 				<h2 id="loginLabel">Login</h2>
 				<div class="cleaner"></div>
 				<div class="inputPair">

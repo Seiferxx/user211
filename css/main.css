@@ -105,6 +105,10 @@ header{
 	margin-left: 10%;
 	margin-right: 10%;
 	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
 }
 
 .cleaner{
@@ -214,7 +218,7 @@ table{
 	margin-left: 5%;
 	margin-bottom: 5%;
 	margin-top: 5%;
-	width: 85%;
+	width: 80%;
 	background-color: gray;
 	border:3px solid black;
 }
@@ -257,7 +261,7 @@ td{
 
 .form1{
 	float: left;
-	width: 60%;
+	width: 100%;
 	margin-bottom: 15%;
 	margin-top: 2%;
 }
@@ -324,17 +328,22 @@ footer{
 
 
 
-@media only screen and ( max-width:320px ){
-
+@media ( max-width:320px ){
+	
 	header{
-		width: 95%;
+		width: 91%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
 	}
 	
+	
 	#header_image{
 		width: 50px;
 		height: 50px;
+	}
+	
+	section{
+		font-size: 14px;
 	}
 	
 	#header_1{
@@ -346,9 +355,10 @@ footer{
 	}
 	
 	#login{
-		width: 95%;
+		width: 91%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
+		height: 300px;
 	}
 	
 	#loginLabel{
@@ -360,23 +370,23 @@ footer{
 	}
 	
 	.inputPair{
-		margin-left: 15%;
+		margin-left: 5%;
 	}
 	
 	.content_f{
-		width: 95%;
+		width: 91%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
 	}
 	
 	.content{
-		width: 95%;
+		width: 91%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
 	}
 	
 	.toolBar{
-		width: 95%;
+		width: 91%;
 		margin-left: 2.3%;
 		margin-right: 2.3%;
 	}	
@@ -407,7 +417,7 @@ footer{
 	
 }
 
-@media screen and ( min-width:400px ) and ( max-width:480px ){
+@media ( min-width:321px ) and ( max-width:480px ){
 	header{
 		width: 95%;
 		margin-left: 2.3%;
