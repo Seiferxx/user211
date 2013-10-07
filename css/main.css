@@ -335,6 +335,10 @@ footer{
 		margin-right: 2.3%;
 	}
 	
+	.inputLess{
+		width: 65px;
+	}
+	
 	.hidden320{
 		display: none;
 	}
