@@ -42,6 +42,7 @@
 	        	var body = document.getElementById( "tableBody" );
 	        	var tRow = document.createElement( "tr" );
 	        	body.appendChild( tRow );
+	        	tRow.setAttribute( "id",  "row" + $( tRow ).index() );
 	        	var day = document.createElement( "td" );
 	        	tRow.appendChild( day );
 	        	var dayInfo = document.createElement( "input" );
@@ -61,9 +62,23 @@
 	        	var delAction = document.createElement( "input" );
 	        	delAction.setAttribute( "value", "X" );
 	        	delAction.setAttribute( "type", "button" );
+	        	delAction.setAttribute( "onclick", "del(" + $( tRow ).index() + ")" );
 	        	del.appendChild( delAction );
         	}
         	
+        	function del( position ){
+        		var i = 0;
+        		var body = document.getElementById( "tableBody" );
+        		var elem = "row" + position;
+        		body.removeChild( document.getElementById( elem ) );
+        		console.log( position+elem );
+        		for( i = 0; i < body.children.length; i++){
+        			body.children[ i ].setAttribute( "id", "row" + $( body.children[ i ] ).index( ) );
+        			body.children[ i ].children[ 0 ].setAttribute( "id", "day" + $( body.children[ i ] ).index( ) );
+        			body.children[ i ].children[ 1 ].setAttribute( "id", "reason" + $( body.children[ i ] ).index( ) );
+        			body.children[ i ].children[ 2 ].setAttribute( "onclick", "del(" + $( body.children[ i ] ).index( ) + ")" );
+        		}
+        	}
         </script>
     </head>
     <body>

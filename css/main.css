@@ -434,6 +434,10 @@ footer{
 		display: none;
 	}
 	
+	.inputLess{
+		width: 100px;
+	}
+	
 	#header_image{
 		width: 60px;
 		height: 60px;
