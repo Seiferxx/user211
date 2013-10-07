@@ -349,7 +349,7 @@ footer{
 	}
 	
 	section{
-		font-size: 14px;
+		font-size: 13px;
 	}
 	
 	#header_1{
@@ -430,6 +430,10 @@ footer{
 		margin-right: 2.3%;
 	}
 	
+	section{
+		font-size: 14px;
+	}
+		
 	.hidden320{
 		display: none;
 	}
@@ -451,6 +455,189 @@ footer{
 		width: 70%;
 		margin-left: 14.3%;
 		margin-right: 14.3%;
+		height: 300px;
+	}
+	
+	#loginLabel{
+		margin-left: 40%;
+	}
+	
+	#loginButton{
+		margin-left: 40%;
+	}
+	
+	#header_2{
+		display:none;
+	}
+	
+	.content{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	.toolBar{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}	
+	
+	.content_f{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	.inputPair{
+		margin-left: 8%;
+	}
+	
+	h1{
+		font-size: 18px;
+	}
+	
+	footer{
+		height: 80px;
+	}
+	
+	#footer_logo{
+		width: 50px;
+		height: 50px;
+		margin-left: 20%;
+	}
+	
+	#footer_info{
+		font-size: 17px;
+	}
+	
+	#footer_info2{
+		display: none;
+	}
+	
+	ul{
+		list-style-type: circle;
+	}
+}
+
+@media ( min-width:481px ) and ( max-width:600px ){
+	header{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	section{
+		font-size: 15px;
+	}
+		
+	.hidden320{
+		display: none;
+	}
+	
+	.inputLess{
+		width: 100px;
+	}
+	
+	#header_image{
+		width: 80px;
+		height: 80px;
+	}
+	
+	#header_1{
+		font-size: 50px;
+	}
+	
+	#login{
+		width: 70%;
+		margin-left: 14.3%;
+		margin-right: 14.3%;
+		height: 300px;
+	}
+	
+	#loginLabel{
+		margin-left: 40%;
+	}
+	
+	#loginButton{
+		margin-left: 40%;
+	}
+	
+	#header_2{
+		display:none;
+	}
+	
+	.content{
+		width: 68%;
+		margin-left: 1%;
+		margin-right: 2.3%;
+	}
+	
+	.toolBar{
+		margin-left: 2%;;
+		font-size: 13px;
+		width: 25%;
+		margin-right: 1%;
+	}	
+	
+	.content_f{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	.inputPair{
+		margin-left: 8%;
+	}
+	
+	h1{
+		font-size: 18px;
+	}
+	
+	footer{
+		height: 130px;
+	}
+	
+	#footer_logo{
+		width: 70px;
+		height: 70px;
+		margin-left: 20%;
+	}
+	
+	#footer_info{
+		font-size: 20px;
+	}
+	
+	
+	ul{
+		list-style-type: circle;
+	}
+}
+
+@media ( min-width:601px ) and ( max-width:800px ){
+	header{
+		width: 95%;
+		margin-left: 2.3%;
+		margin-right: 2.3%;
+	}
+	
+	section{
+		font-size: 15px;
+	}
+	
+	#header_image{
+		width: 60px;
+		height: 60px;
+	}
+	
+	#header_1{
+		font-size: 40px;
+	}
+	
+	#login{
+		width: 70%;
+		margin-left: 14.3%;
+		margin-right: 14.3%;
+		height: 300px;
 	}
 	
 	#loginLabel{
