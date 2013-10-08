@@ -148,6 +148,7 @@ header{
 	margin-right: 30%;
 	margin-bottom: 5%;
 	border-radius: 10px;
+	font-size: 14px;
 }
 
 #loginLabel{
@@ -252,6 +253,7 @@ td{
 	margin-left: 10%;
 	margin-top: 2%;
 	margin-bottom: 2%;
+	font-size: 14px;
 	margin-right: 2%;
 	background-color: #738e90;
 	width: 16%;
@@ -272,6 +274,7 @@ td{
 	margin-bottom: 2%;
 	background-color: #738e90;
 	width: 62%;
+	font-size: 14px;
 	border-radius: 10px;
 }
 
@@ -283,6 +286,7 @@ td{
 	margi-right: 10%;
 	background-color: #738e90;
 	width: 80%;
+	font-size: 14px;
 	border-radius: 10px;
 }
 
@@ -336,7 +340,7 @@ footer{
 	}
 	
 	.inputLess{
-		width: 65px;
+		width: 30px;
 	}
 	
 	.hidden320{

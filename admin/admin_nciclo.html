@@ -79,6 +79,10 @@
         			body.children[ i ].children[ 2 ].setAttribute( "onclick", "del(" + $( body.children[ i ] ).index( ) + ")" );
         		}
         	}
+        	
+        	function validator(){
+        		
+        	}
         </script>
     </head>
     <body>
@@ -108,9 +112,9 @@
         		<div class="inputPair">
 		    		<label class="inputLabel2" for="year">Ciclo escolar:</label>
 		    		<input id="year" name="year" type="number" min="2013" />
-		    		<select>
-		    			<option>A</option>
-		    			<option>B</option>
+		    		<select id="ab" name="ab">
+		    			<option value=1>A</option>
+		    			<option value=2>B</option>
 		    		</select>
         		</div>
         		<div class="inputPair">
