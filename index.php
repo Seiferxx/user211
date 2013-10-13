@@ -8,15 +8,14 @@
 	*/
 
 	switch( $_GET[ "control" ] ){
-		case "ygyug":
+		case "login":
+			require_once( "./controller/loginCtrl.php" );
+			$login = new loginCtrl( );
+			$login -> run( );
 			break;
-		case "main":
+		case "administrator":
 			break;
 		default:
-			require_once( "./controller/loginCtrl.php" );
+			
 	}
-
-
-
-
 ?>
