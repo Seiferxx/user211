@@ -9,16 +9,13 @@
 
 	class loginCtrl{
 		
-		function __construct(  ){
-		}
-		
-		function run( ){
+		function run( $singleton ){
 			switch( $_GET[ "action" ] ){
 				case "authenticate":
 					$user = $_POST[ "user" ];
 					$passwd = $_POST[ "passwd" ];
 					require_once( "./model/loginMdl.php" );
-					$loginM = new loginMdl( );
+					$loginM = new loginMdl( $singleton );
 					$loginM -> authenticate( $user, sha1( $passwd ) );
 					break;
 				case "signIn":

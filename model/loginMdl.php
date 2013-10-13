@@ -11,8 +11,8 @@
 		private $connection;
 		private $query;
 		
-		public function __construct(  ){
-			$this -> connection = new mysqli( "localhost", "root", "seiferaida", "cc409_user211" ) or die( "DB Error: Connection" );
+		public function __construct( $connection ){
+			$this -> connection = $connection;
 		}
 		
 		public function authenticate( $user, $passwd ){
@@ -22,7 +22,7 @@
 			$db_key = $row[ 0 ];
 			$type = $row[ 1 ];
 			if( $db_key === $passwd ){
-				
+				echo "vato reatudo";
 			}
 			else{
 				echo "enviar al inicio y mostrar error";
