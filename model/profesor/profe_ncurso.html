@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sistema Universitario de Control Escolar</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+        	function validator( ){
+        		
+        	}	
+        
+        	function step2( ){
+        		var val = document.getElementById( "n" );
+        		var n = val.value;
+        		var table = document.createElement( "table" );
+        		var thead = document.createElement( "thead" );
+        		var thRow = document.createElement( "tr" );
+        		var button = document.getElementById( "endButton" );
+        		var th1 = document.createElement( "th" );
+        		th1.appendChild( document.createTextNode( "Rubro" ) );
+        		var th2 = document.createElement( "th" );
+        		th2.appendChild( document.createTextNode( "Porcentaje" ) );
+        		var th3 = document.createElement( "th" );
+        		th3.appendChild( document.createTextNode( "Hoja Extra?" ) );
+        		var th4 = document.createElement( "th" );
+        		th4.appendChild( document.createTextNode( "N" ) );
+        		thRow.appendChild( th1 );
+        		thRow.appendChild( th2 );
+        		thRow.appendChild( th3 );
+        		thRow.appendChild( th4 );
+        		table.appendChild( thead );
+        		thead.appendChild( thRow );
+        		button.parentNode.insertBefore( table, button.nextSibling );
+        		var nextButton = document.createElement( "input" );
+        		nextButton.setAttribute( "type", "button" );
+        		nextButton.setAttribute( "onclick", "step3( )" );
+        		nextButton.setAttribute( "value", "Siguiente" );
+        		nextButton.setAttribute( "class", "endButton" );
+        		table.parentNode.appendChild( nextButton );
+        		var tbody = document.createElement( "tbody" );
+        		for( var i = 0; i < parseInt( n ); i++ ){
+        			var tRow = document.createElement( "tr" );
+        			var td1 = document.createElement( "td" );
+        			var td2 = document.createElement( "td" );
+        			var td3 = document.createElement( "td" );
+        			var td4 = document.createElement( "td" );
+        			var r = document.createElement( "input" );
+        			r.setAttribute( "class", "inputLess" );
+        			r.setAttribute( "id", "r" + i );
+        			r.setAttribute( "type", "text" );
+        			var val = document.createElement( "input" );
+        			val.setAttribute( "class", "inputLess" );
+        			val.setAttribute( "id", "val" + i );
+        			val.setAttribute( "type", "number" );
+        			val.setAttribute( "min", "0" );
+        			var extra = document.createElement( "input" );
+        			extra.setAttribute( "id", "extra" + i );
+        			extra.setAttribute( "type", "checkbox" );
+        			extra.setAttribute( "onclick", "activateN( " + i + " )" ); 
+        			var nr = document.createElement( "input" );
+        			nr.setAttribute( "class", "inputLess" );
+        			nr.setAttribute( "id", "nr" + i );
+        			nr.setAttribute( "type", "number" );
+        			nr.setAttribute( "min", "0" );
+        			nr.disabled = true;
+        			td1.appendChild( r );
+        			td2.appendChild( val );
+        			td3.appendChild( extra );
+        			td4.appendChild( nr );
+        			tRow.appendChild( td1 );
+        			tRow.appendChild( td2 );
+        			tRow.appendChild( td3 );
+        			tRow.appendChild( td4 );
+        			tbody.appendChild( tRow );
+        			table.insertBefore( tbody, table.lastChild );
+        			button.parentNode.insertBefore( table, button.nextSibling );
+        			var button = document.getElementById( "endButton" );
+        			
+        		}
+        		
+        	}
+        	
+        	function step3( ){
+        		var val = document.getElementById( "n" );
+        		var n = val.value;
+        		for( var i = 0; i < parseInt( n ); i++ ){
+        			var elem = document.getElementById( "extra" + i );
+        			if( elem.checked ){
+        				var len = document.getElementById( "nr"+ i );
+        				len = len.value;
+	        			var table = document.createElement( "table" );
+	        			var caption = document.createElement( "caption" );
+	        			caption.appendChild( document.createTextNode( document.getElementById( "r"+ i ).value )   );
+	        			table.appendChild( caption );
+	            		var thead = document.createElement( "thead" );
+	            		var thRow = document.createElement( "tr" );
+	            		var button = document.getElementById( "endButton" );
+	            		var th1 = document.createElement( "th" );
+	            		th1.appendChild( document.createTextNode( "Rubro" ) );
+	            		var th2 = document.createElement( "th" );
+	            		th2.appendChild( document.createTextNode( "Porcentaje" ) );
+	            		thRow.appendChild( th1 );
+	            		thRow.appendChild( th2 );
+	            		table.appendChild( thead );
+	            		thead.appendChild( thRow );
+	            		button.parentNode.appendChild( table );
+	            		tbody = document.createElement( "tbody" );
+	            		for( var j = 0; j < len; j++ ){
+	            			var tRow = document.createElement( "tr" );
+	            			var td1 = document.createElement( "td" );
+	            			var td2 = document.createElement( "td" );
+	            			var sr = document.createElement( "input" );
+	            			sr.setAttribute( "class", "inputLess" );
+	            			sr.setAttribute( "id", "sr" + j );
+	            			sr.setAttribute( "type", "text" );
+	            			var sval = document.createElement( "input" );
+	            			sval.setAttribute( "class", "inputLess" );
+	            			sval.setAttribute( "id", "sval" + j );
+	            			sval.setAttribute( "type", "number" );
+	            			sval.setAttribute( "min", "0" );
+	            			td1.appendChild( sr );
+	            			td2.appendChild( sval );
+	            			tRow.appendChild( td1 );
+	            			tRow.appendChild( td2 );
+	            			tbody.appendChild( tRow );
+	            			table.insertBefore( tbody, table.lastChild );
+	            		}
+        			}
+        		}
+        	}
+        	
+        	function activateN( n ){
+        		var field = document.getElementById( "nr" + n );
+        		var check = document.getElementById( "extra" + n );
+        		if( check.checked ){
+        			field.disabled = false;
+        		}
+        		else{
+        			field.disabled = true;
+        		}
+        	}
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+        	<img src="../img/lion_logo.gif" id="header_image"/>
+        	<h1 id="header_1">SUCE</h1>
+        	<h4 id="header_2">Sistema Universitario de Control Escolar</h4>
+        	<div class="cleaner"></div>
+        </header>
+        <aside class="toolBar">
+        	<ul>
+        		<li><a href="profe_home.html">Profesor</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Agregar Cursos</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Indique los datos correspondientes al curso.
+        	</p>
+        	<div class="cleaner"></div>
+        	<form method="post" class="form1">
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Ciclo:</label>
+		    		<select>
+		    			<option>2013A</option>
+		    			<option>2013B</option>
+		    			<option>2014A</option>
+		    		</select>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2">Nombre</label>
+		    		<input type="text" placeholder="Ej. Sistemas Digitales"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="n">Cantidad de Rubros</label>
+		    		<input id="n" name="n" type="number" min="0"/>
+				</div>
+        		<input class="endButton" id="endButton" type="button" value="Siguiente" onclick="step2( )"/>
+        	</form>
+        </section>
+        <div class="cleaner"></div>
+        <footer>
+        		<div class="cleaner" ></div>
+        		<img id="footer_logo" src="../img/udg_logo.png" />
+        		<h1 id="footer_info">Universidad de Guadalajara</h1>
+        		<div class="cleaner"></div>
+        		<h3 id="footer_info2">2013</h3>
+        </footer>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="../js/plugins.js"></script>
+        <script src="../js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>
