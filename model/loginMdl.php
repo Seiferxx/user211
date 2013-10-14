@@ -24,6 +24,7 @@
 			if( $dbKey == $passwd ){
 				switch( $type ){
 					case "ADMINISTRATOR":
+						header( "Location: ./index.php?control=admin&action=index" );
 						break;
 					case "TEACHER":
 						break;

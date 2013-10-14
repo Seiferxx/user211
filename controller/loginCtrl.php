@@ -9,7 +9,7 @@
 
 	class loginCtrl{
 		
-		function run( $singleton ){
+		public function run( $singleton ){
 			switch( $_GET[ "action" ] ){
 				case "authenticate":
 					$user = $_POST[ "user" ];

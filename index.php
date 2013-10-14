@@ -18,9 +18,15 @@
 			$login = new loginCtrl(  );
 			$login -> run( $singleton );
 			break;
-		case "administrator":
+		case "admin":
 			require_once( "./controller/adminCtrl.php" );
+			$admin = new adminCtrl( );
+			$admin -> run( $singleton );
 			break;
+		case "cicle":
+			require_once( "./controller/cicleCtrl.php" );
+			$cicle = new cicleCtrl( );
+			
 		default:
 			
 	}
