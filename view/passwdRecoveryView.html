@@ -3,6 +3,12 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!-- Universidad de Guadalajara  -->
+<!-- Centro Universitario de Ciencias Exactas e Ingenierias -->
+<!-- Programacion Web -->
+<!-- Sistema Universitario de Control Escolar SUCE -->
+<!-- Cuauhtemoc Herrera Muñoz -->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,41 +16,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="./css/normalize.css">
-        <link rel="stylesheet" href="./css/main.css">
-        <script src="./js/vendor/modernizr-2.6.2.min.js"></script>
-		<script>
-			function validator( ){
-				if( document.getElementById( "errorLine" ) == null ){
-					var cleaner = document.createElement( "div" );
-					var err = document.createElement( "p" );
-					var button = document.getElementById( "endButton" );
-					cleaner.setAttribute( "class", "cleaner" );
-					err.setAttribute( "class", "errorLine" );
-					err.setAttribute( "id", "errorLine" );
-					err.appendChild( document.createTextNode( "" ) );
-					button.parentNode.appendChild( cleaner );
-					button.parentNode.appendChild( err );
-				}
-				var errLine = document.getElementById( "errorLine" );
-				var mail = document.getElementById( "mail" );
-				var regex = /(\w+(\.|\-)?)+@(\w+(\.|\-)?)+/;
-				var error1 = document.createTextNode( "Correo Invalido" );
-				if ( mail.value.match( regex ) == null ){
-					errLine.replaceChild(  error1, errLine.firstChild );
-				}
-				else{
-					location.href="index.html";
-				} 
-			}
-		</script>
+        <link rel="stylesheet" href="./www/css/normalize.css">
+        <link rel="stylesheet" href="./www/css/main.css">
+        <script src="./www/js/vendor/modernizr-2.6.2.min.js"></script>
+		<script src="./www/js/validators.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <header>
-        	<img src="./img/lion_logo.gif" id="header_image"/>
+        	<img src="./www/img/lion_logo.gif" id="header_image"/>
         	<h1 id="header_1">SUCE</h1>
         	<h4 id="header_2">Sistema Universitario de Control Escolar</h4>
         	<div class="cleaner"></div>
@@ -59,28 +41,28 @@
         		sistema.
         		<br>
         		<br>
-        		<a href="index.html">Regresar al inicio</a>
+        		<a href="index.php?control=login&action=signIn">Regresar al inicio</a>
         	</p>
-        	<form class="form1" method="post" action="">
+        	<form class="form1" method="post" action="index.php?control=login&action=sendPasswd" name="fRecovery">
 				<div class="inputPair">
 					<label class="inputLabel3" for="mail">Correo:</label>
 					<input type="email" name="mail" id="mail"/>
 				</div>        		
-				<input id="endButton" type="button" class="endButton" value="Recuperar" onclick="validator( )"/>
+				<input id="endButton" type="button" class="endButton" value="Recuperar" onclick="passwdRecoveryValidator( )"/>
         	</form>
         </section>
         <div class="cleaner"></div>
         <footer>
         		<div class="cleaner" ></div>
-        		<img id="footer_logo" src="./img/udg_logo.png" />
+        		<img id="footer_logo" src="./www/img/udg_logo.png" />
         		<h1 id="footer_info">Universidad de Guadalajara</h1>
         		<div class="cleaner"></div>
         		<h3 id="footer_info2">2013</h3>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="./js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-        <script src="./js/plugins.js"></script>
-        <script src="./js/main.js"></script>
+        <script>window.jQuery || document.write('<script src="./www/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <script src="./www/js/plugins.js"></script>
+        <script src="./www/js/main.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

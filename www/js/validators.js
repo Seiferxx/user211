@@ -39,3 +39,27 @@ function login_validator( ){
 		document.fLogin.submit( );
 	} 
 }
+
+function passwdRecoveryValidator( ){
+	if( document.getElementById( "errorLine" ) == null ){
+		var cleaner = document.createElement( "div" );
+		var err = document.createElement( "p" );
+		var button = document.getElementById( "endButton" );
+		cleaner.setAttribute( "class", "cleaner" );
+		err.setAttribute( "class", "errorLine" );
+		err.setAttribute( "id", "errorLine" );
+		err.appendChild( document.createTextNode( "" ) );
+		button.parentNode.appendChild( cleaner );
+		button.parentNode.appendChild( err );
+	}
+	var errLine = document.getElementById( "errorLine" );
+	var mail = document.getElementById( "mail" );
+	var regex = /(\w+(\.|\-)?)+@(\w+(\.|\-)?)+/;
+	var error1 = document.createTextNode( "Correo Invalido" );
+	if ( mail.value.match( regex ) == null ){
+		errLine.replaceChild(  error1, errLine.firstChild );
+	}
+	else{
+		document.fRecovery.submit( );
+	} 
+}

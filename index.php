@@ -19,6 +19,7 @@
 			$login -> run( $singleton );
 			break;
 		case "administrator":
+			require_once( "./controller/adminCtrl.php" );
 			break;
 		default:
 			
