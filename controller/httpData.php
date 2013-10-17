@@ -97,7 +97,7 @@ $documentCicleShow = "
         				<tr>
         					<td class=\"checker\"><input type=\"checkbox\"/></td>
         					<td>2013B</td>
-        					<td><input type="button" value="Editar"/></td>
+        					<td><input type=\"button" value="Editar"/></td>
         					<td><input type="button" value="Eliminar"/></td>
         				</tr>
         				<tr>
