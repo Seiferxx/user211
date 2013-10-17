@@ -1,4 +1,5 @@
 <?php
+
 	/*Universidad de Guadalajara
 	*Centro Universitario de Ciencias Exactas e Ingenierias
 	*Programacion Web

@@ -26,7 +26,7 @@
 		case "cicle":
 			require_once( "./controller/cicleCtrl.php" );
 			$cicle = new cicleCtrl( );
-			
+			$cicle -> run( $singleton );
 		default:
 			
 	}

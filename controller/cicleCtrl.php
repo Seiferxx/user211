@@ -12,6 +12,9 @@
 		public function run( $singleton ){
 			switch( $_GET[ "action" ] ){
 				case "show":
+					require_once ("./model/cicleMdl.php");
+					$show = new cicleMdl( $singleton );
+					$show -> show( );
 					break;
 				case "create":
 					break;
