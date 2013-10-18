@@ -1,6 +1,6 @@
 		<aside class="toolBar">
         	<ul>
-        		<li><a href="./index.php?control=cicle&action=add">Agregar Ciclo</a></li>
+        		<li><a href="./index.php?control=cicle&action=create">Agregar Ciclo</a></li>
         		<li><a href="./index.php?control=admin&action=index">Admin</a></li>
         	</ul>
         </aside>
@@ -30,17 +30,17 @@
         			</thead>
         			<tbody>
         				<tr>
-        					<td class="checker"><input type="checkbox"></td>
+        					<td class="checker"><input type="checkbox" id="checkbox{id}"></td>
         					<td> {cicle} </td>
         					<td class="hidden320"> {start} </td>
         					<td class="hidden320"> {end} </td>
-        					<td><input type="button" value="Editar"></td>
-        					<td><input type="button" value="X"></td>
+        					<td><input type="button" value="Editar" id="edit{id}" onclick="./index.php?control=cicle&action=edit&value={id}"></td>
+        					<td><input type="button" value="X" id="delete{id}" onclick="./index.php?control=cicle&action=delete&value={id}"></td>
         				</tr>
         			</tbody>
         		</table>
         		<div class="inputPair">
-        			<input class="endButton" type="button" value="Eliminar marcados"/>
+        			<input class="endButton" type="button" value="Eliminar marcados" onclick="getChecked( )"/>
         		</div>
         	</form>
         </section>

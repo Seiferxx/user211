@@ -37,6 +37,9 @@
 					echo $footer;
 					break;
 				case "create":
+					require_once( "./view/cicleCreateView.html" );
+					break;
+				case "save":
 					break;
 				case "edit":
 					break;

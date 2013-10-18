@@ -63,3 +63,7 @@ function passwdRecoveryValidator( ){
 		document.fRecovery.submit( );
 	} 
 }
+
+function cicleValidatorNew(){	
+	
+}

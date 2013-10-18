@@ -11,7 +11,6 @@
 	require_once( "./controller/config.inc" );
 	$singleton = dbMan::getInstance( $user, $passwd, $database, $server );
 	
-	
 	switch( $_GET[ "control" ] ){
 		case "login":
 			require_once( "./controller/loginCtrl.php" );
@@ -27,7 +26,8 @@
 			require_once( "./controller/cicleCtrl.php" );
 			$cicle = new cicleCtrl( );
 			$cicle -> run( $singleton );
+			break;
 		default:
-			
+			require_once( "./view/404.html" );
 	}
 ?>
