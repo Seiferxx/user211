@@ -42,7 +42,5 @@
 			$result = $this -> connection -> query( $query );
 			return $result;
 		}
-		
 	}
-
 ?>

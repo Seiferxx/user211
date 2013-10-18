@@ -1,0 +1,46 @@
+		<aside class="toolBar">
+        	<ul>
+        		<li><a href="./index.php?control=cicle&action=add">Agregar Ciclo</a></li>
+        		<li><a href="./index.php?control=admin&action=index">Admin</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Ciclos Escolares</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Esta herramienta le permite agregar ciclos escolares para ser usados por
+        		profesores, para cada curso se debe indicar la fecha de inicio y
+        		termino y los dias en los que no habra clases incluyendo una breve
+        		explicacion sobre las causas.
+        		<br>
+        		<br>
+        		A continuacion se muestran los ciclos registrados.
+        	</p>
+        	<form class="form1" name="form" method="post" action="">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox" id="master" onclick="selectAll( )"/></th>
+        					<th>Ciclo escolar</th>
+        					<th class="hidden320">Inicio</th>
+        					<th class="hidden320">Fin</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="checker"><input type="checkbox"></td>
+        					<td> {cicle} </td>
+        					<td class="hidden320"> {start} </td>
+        					<td class="hidden320"> {end} </td>
+        					<td><input type="button" value="Editar"></td>
+        					<td><input type="button" value="X"></td>
+        				</tr>
+        			</tbody>
+        		</table>
+        		<div class="inputPair">
+        			<input class="endButton" type="button" value="Eliminar marcados"/>
+        		</div>
+        	</form>
+        </section>

@@ -18,7 +18,7 @@
 					require_once( "./view/doc.html" );
 					break;
 				default:
-					
+					require_once( "./view/404.html" );
 			}
 		}
 		

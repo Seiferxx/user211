@@ -16,7 +16,24 @@
 					$passwd = sha1( $_POST[ "passwd" ] );
 					require_once( "./model/loginMdl.php" );
 					$loginM = new loginMdl( $singleton );
-					$loginM -> authenticate( $user, $passwd );
+					$result = $loginM -> authenticate( $user, $passwd );
+					$row = $result -> fetch_row( );
+					$dbKey = $row[ 0 ];
+					$type = $row[ 1 ];
+					if( $dbKey == $passwd ){
+						switch( $type ){
+							case "ADMINISTRATOR":
+								header( "Location: ./index.php?control=admin&action=index" );
+								break;
+							case "TEACHER":
+								break;
+							case "ALUMN":
+								break;
+						}
+					}
+					else{
+						echo "Implementar pantalla de inicio y error de acceso";
+					}
 					break;
 				case "signIn":
 					require_once( "./view/loginView.html" );
@@ -28,7 +45,20 @@
 					$mail = $_POST[ "mail" ];
 					require_once( "./model/loginMdl.php" );
 					$loginM = new loginMdl( $singleton );
-					$loginM -> passwdRecovery( $mail );
+					$result = $loginM -> passwdRecovery( $mail );
+					if( $result ){
+						echo "Implementar envio de mensaje a correo electronico";
+					}
+					else{
+						$this -> query = "select mail from alumn where mail = ".$mail.";";
+						$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+						if( $result ){
+							echo "Implementar envio de mensaje a correo electronico";
+						}
+						else{
+							echo "Implementar pantalla de error para correo inexistente";	
+						}
+					}
 					break;
 				default:
 					require_once( "./view/404.html" );	
