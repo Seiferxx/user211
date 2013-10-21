@@ -65,5 +65,13 @@ function passwdRecoveryValidator( ){
 }
 
 function cicleValidatorNew(){	
-	
+	var ab = document.getElementById( "ab" );
+	var year = document.getElementById( "year" );
+	var init = document.getElementById( "init" );
+	var end = document.getElementById( "end" );
+	var i;
+	var body = document.getElementById( "tableBody" );
+	if( body != null ){
+		
+	}
 }

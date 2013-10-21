@@ -44,10 +44,8 @@ function getChecked( ){
 }
 
 function addDay( ){
-	alert( "asdasd" );
-	/*
 	if( document.getElementById( "freeDays" ) == null ){
-		var button = document.getElementById( "addDay" );
+		var button = document.getElementById( "addD" );
 		var dayTable = document.createElement( "table" );
 		dayTable.setAttribute( "id", "freeDays" );
 		var header = document.createElement( "thead" );
@@ -78,6 +76,7 @@ function addDay( ){
 	dayInfo.setAttribute( "type", "date" );
 	dayInfo.setAttribute( "class", "inputLess" );
 	dayInfo.setAttribute( "id",  "day" + $( tRow ).index() );
+	dayInfo.setAttribute( "name",  "day" + $( tRow ).index() );
 	day.appendChild( dayInfo );
 	var reason = document.createElement( "td" );
 	tRow.appendChild( reason );
@@ -85,26 +84,29 @@ function addDay( ){
 	reasonInfo.setAttribute( "type", "text" );
 	reasonInfo.setAttribute( "class", "inputLess" );
 	reasonInfo.setAttribute( "id",  "reason" + $( tRow ).index() );
+	reasonInfo.setAttribute( "name",  "reason" + $( tRow ).index() );
 	reason.appendChild( reasonInfo );
 	var del = document.createElement( "td" );
 	tRow.appendChild( del );
 	var delAction = document.createElement( "input" );
 	delAction.setAttribute( "value", "X" );
 	delAction.setAttribute( "type", "button" );
-	delAction.setAttribute( "onclick", "del(" + $( tRow ).index() + ")" );
-	del.appendChild( delAction );*/
+	delAction.setAttribute( "onclick", "delDay(" + $( tRow ).index() + ")" );
+	del.appendChild( delAction );
 }
 
 function delDay( position ){
-	var i = 0;
+	var i;
 	var body = document.getElementById( "tableBody" );
 	var elem = "row" + position;
 	body.removeChild( document.getElementById( elem ) );
-	console.log( position+elem );
 	for( i = 0; i < body.children.length; i++){
-		body.children[ i ].setAttribute( "id", "row" + $( body.children[ i ] ).index( ) );
-		body.children[ i ].children[ 0 ].setAttribute( "id", "day" + $( body.children[ i ] ).index( ) );
-		body.children[ i ].children[ 1 ].setAttribute( "id", "reason" + $( body.children[ i ] ).index( ) );
-		body.children[ i ].children[ 2 ].setAttribute( "onclick", "delDay(" + $( body.children[ i ] ).index( ) + ")" );
+		body.children[ i ].children[ 0 ].setAttribute( "id", "row" + $( body.children[ i ] ).index( ) );
+		body.children[ i ].children[ 0 ].children[ 0 ].setAttribute( "id", "day" + $( body.children[ i ] ).index( ) );
+		body.children[ i ].children[ 0 ].children[ 1 ].setAttribute( "id", "reason" + $( body.children[ i ] ).index( ) );
+		body.children[ i ].children[ 0 ].children[ 2 ].setAttribute( "onclick", "delDay(" + $( body.children[ i ] ).index( ) + ")" );
+	}
+	if( i == 0 ){
+		body.parentNode.parentNode.removeChild( body.parentNode );
 	}
 }

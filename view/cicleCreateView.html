@@ -46,8 +46,8 @@
 		    		<label class="inputLabel2" for="year">Ciclo escolar:</label>
 		    		<input id="year" name="year" type="number" min="2013" />
 		    		<select id="ab" name="ab">
-		    			<option value=1>A</option>
-		    			<option value=2>B</option>
+		    			<option value="A">A</option>
+		    			<option value="B">B</option>
 		    		</select>
         		</div>
         		<div class="inputPair">
@@ -60,9 +60,9 @@
         		</div>
         		<div class="cleaner"></div>
         		<div class="inputPair">
-        			<input class="addDay" id="addDay" type="button" value="Agregar dia libre" onclick="addDay()"/>
+        			<input id="addD" type="button" value="Agregar dia libre" onclick="addDay( )"/>
         		</div>	
-        		<input class="endButton" type="button" value="Agregar" />
+        		<input class="endButton" type="button" value="Agregar" onclick="cicleValidatorNew( )" />
         	</form>
         </section>
         <div class="cleaner"></div>
