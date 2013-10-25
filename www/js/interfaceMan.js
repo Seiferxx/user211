@@ -40,12 +40,14 @@ function getChecked( ){
 	}
 	else{
 		//Validar y eliminar elementos
+		var response = confirm( "Realmente desea eliminar esos registros?" );
+		alert( response ); 
 	}
 }
 
 function addDay( ){
 	if( document.getElementById( "freeDays" ) == null ){
-		var button = document.getElementById( "addD" );
+		var button = document.getElementById( "addD" ).parentNode;
 		var dayTable = document.createElement( "table" );
 		dayTable.setAttribute( "id", "freeDays" );
 		var header = document.createElement( "thead" );

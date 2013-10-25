@@ -27,6 +27,11 @@
 			$cicle = new cicleCtrl( );
 			$cicle -> run( $singleton );
 			break;
+		case "alumn":
+			require_once( "./controller/alumnCtrl.php" );
+			$alumn = new alumnCtrl( );
+			$alumn -> run( $singleton );
+			break;
 		default:
 			require_once( "./view/404.html" );
 	}

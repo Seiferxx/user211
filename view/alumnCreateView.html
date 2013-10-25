@@ -1,0 +1,58 @@
+		<aside class="toolBar">
+        	<ul>
+        		<li><a href="#">Alumnos</a></li>
+        		<li><a href="#">Admin</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Agregar Alumnos</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Indique los datos correspondientes al alumno.
+        	</p>
+        	<div class="cleaner"></div>
+        	<form method="post" name="form" class="form1" action="./index.php?control=alumn&action=register">
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="name">Nombre:</label>
+		    		<input type="text" id="name" name="name"placeholder="Ej.Pedro Perez Lopez"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="acount">Cuenta:</label>
+		    		<input type="text" name="acount" id="acount" placeholder="Ej.pedro.perez"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="phone">Telefono:</label>
+		    		<input type="tel" name="phone" id="phone" placeholder="Ej.10283726"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="code">Codigo:</label>
+		    		<input type="text" name="code" id="code" placeholder="Ej.207453132"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="career">Carrera:</label>
+		    		<select name="career" id="career">
+						<option value="{idVal}">{val}</option>
+		    		</select>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="mail">Correo:</label>
+		    		<input type="email" name="mail" id="mail" placeholder="Ej.correo@mail.com"/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="cel">Celular:</label>
+		    		<input type="checkbox" id="celCheck" onclick="activateCel( )"/>
+		    		<input type="text" name="cel" id="cel" disabled/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="git">Github:</label>
+		    		<input type="checkbox" id="gitCheck" onclick="activateGit( )" />
+		    		<input type="text" name="git" id="git" disabled/>
+        		</div>
+        		<div class="inputPair">
+		    		<label class="inputLabel2" for="web">Pagina Web:</label>
+		    		<input type="checkbox" id="webCheck" onclick="activateWeb( )"/>
+		    		<input type="text" name="web" id="web" disabled/>
+        		</div>
+        		<input class="endButton" type="button" value="Agregar" onclick="alumnValidator( )"/>
+        	</form>
+        </section>

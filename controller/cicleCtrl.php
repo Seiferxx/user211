@@ -30,8 +30,6 @@
 						$rows .= $nRow;
 					}
 					$content = str_replace( $sRow, $rows, $content );
-					
-					
 					echo $header;
 					echo $content;
 					echo $footer;
@@ -46,7 +44,7 @@
 				case "delete":
 					break;
 				default:
-					
+					require_once( "./view/404.html" );
 			} 
 		}
 	}

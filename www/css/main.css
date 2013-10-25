@@ -156,6 +156,10 @@ header{
 	float: left;	
 }
 
+select{
+	font-size: 10px;
+}
+
 #loginButton{
 	float: left;
 	margin-top: 10%;
@@ -188,6 +192,10 @@ header{
 	color: red;
 	text-align: center;
 	background-color: gray;
+}
+
+.errorInput{
+	border: 2px solid red;
 }
 
 .inputLabel3{
