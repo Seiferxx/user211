@@ -88,17 +88,6 @@ function alumnValidator( ){
 		name.parentNode.insertBefore( errorName, name.nextSibling );
 		name.parentNode.insertBefore( cleaner, name.nextSibling );
 	}
-	if( document.getElementById( "errorAcount" ) == null ){
-		var errorAcount = document.createElement( "p" );
-		var cleaner = document.createElement( "div" );
-		var acount = document.getElementById( "acount" );
-		cleaner.setAttribute( "class", "cleaner" );
-		errorAcount.setAttribute( "class", "errorLine" );
-		errorAcount.setAttribute( "id", "errorAcount" );
-		errorAcount.appendChild( document.createTextNode( "" ) );
-		acount.parentNode.insertBefore( errorAcount, acount.nextSibling );
-		acount.parentNode.insertBefore( cleaner, acount.nextSibling );
-	}
 	if( document.getElementById( "errorCode" ) == null ){
 		var errorCode = document.createElement( "p" );
 		var cleaner = document.createElement( "div" );
@@ -176,18 +165,16 @@ function alumnValidator( ){
 	var cel = document.getElementById( "celCheck" );
 	
 	var nameRegex = /(\w+(\s)?)+/;
-	var acountRegex = /\w+\.\w+/;
 	var numberRegex = /\d+/;
 	var mailRegex = /(\w+(\.|\-)?)+@(\w+(\.\-)?)+/;
 	
 	var error1 = "Campo obligatorio";
 	var error2 = document.createTextNode( "Nombre invalido" );
-	var error3 = document.createTextNode( "Cuenta invalida" );
 	var error4 = document.createTextNode( "Codigo invalido" );
 	var error5 = document.createTextNode( "Telefono invalido" );
 	var error6 = document.createTextNode( "Correo invalido" );
 	var error7 = "Pagina invalida";
-	var error8 = "Cuenta invalida";
+	var error8 = "Cuenta invalida, formato <github.com/user>";
 	var error9 = "Celular invalido";
 	
 	var flag = false;
@@ -204,20 +191,6 @@ function alumnValidator( ){
 	}
 	else{
 		var err = document.getElementById( "errorName" );
-		err.parentNode.removeChild( err );
-	}
-	if( acount.value.match( acountRegex ) == null ){
-		flag = true;
-		var err = document.getElementById( "errorAcount" );
-		if( acount.value.length == 0 ){
-			err.replaceChild( document.createTextNode( error1 ), err.firstChild );
-		}
-		else{
-			err.replaceChild( error3, err.firstChild );
-		}
-	}
-	else{
-		var err = document.getElementById( "errorAcount" );
 		err.parentNode.removeChild( err );
 	}
 	if( phone.value.match( numberRegex ) == null ){
@@ -310,42 +283,6 @@ function alumnValidator( ){
 		err.parentNode.removeChild( err );
 	}
 	if( !flag ){
-		//Generar contraseña y enviar correo
-	}
-}
-
-function activateWeb( ){
-	var web = document.getElementById( "webCheck" );
-	var field = document.getElementById( "web" );
-	if( web.checked ){
-		field.disabled = false;
-	}
-	else{
-		field.disabled = true;
-		field.value=""
-	}
-}
-
-function activateCel( ){
-	var cel = document.getElementById( "celCheck" );
-	var field = document.getElementById( "cel" );
-	if( cel.checked ){
-		field.disabled = false;
-	}
-	else{
-		field.disabled = true;
-		field.value=""
-	}
-}
-
-function activateGit( ){
-	var git = document.getElementById( "gitCheck" );
-	var field = document.getElementById( "git" );
-	if( git.checked ){
-		field.disabled = false;
-	}
-	else{
-		field.disabled = true;
-		field.value=""
+		document.form.submit( );
 	}
 }

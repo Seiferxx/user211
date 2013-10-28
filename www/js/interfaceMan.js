@@ -112,3 +112,40 @@ function delDay( position ){
 		body.parentNode.parentNode.removeChild( body.parentNode );
 	}
 }
+
+function activateWeb( ){
+	var web = document.getElementById( "webCheck" );
+	var field = document.getElementById( "web" );
+	if( web.checked ){
+		field.disabled = false;
+	}
+	else{
+		field.disabled = true;
+		field.value=""
+	}
+}
+
+function activateCel( ){
+	var cel = document.getElementById( "celCheck" );
+	var field = document.getElementById( "cel" );
+	if( cel.checked ){
+		field.disabled = false;
+	}
+	else{
+		field.disabled = true;
+		field.value=""
+	}
+}
+
+function activateGit( ){
+	var git = document.getElementById( "gitCheck" );
+	var field = document.getElementById( "git" );
+	if( git.checked ){
+		field.disabled = false;
+	}
+	else{
+		field.disabled = true;
+		field.value=""
+	}
+}
+
