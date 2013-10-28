@@ -43,11 +43,11 @@
 					//Mail composition and sending
 					$to = $mail;
 					$subject = "Registro de cuenta en SUCE";
-					$headers = "From: suceAcounts@sucesys.udg\n MIME-Version: 1.0\n Content-Type: text/html; charset=UTF-8\n";
+					$headers = "From: suceAcounts@sucesys.udg\n\rMIME-Version: 1.0\n\rContent-Type: text/html; charset=UTF-8\n\r";
 					$messageContent = file_get_contents( "./view/alumnMail.html" );
 					$messageContent = str_replace( "{user}", $code, $messageContent );
 					$messageContent = str_replace( "{passwd}", $password, $messageContent );
-					$mail( $to, $subject, $headers, $messageContent );
+					mail( $to, $subject, $headers, $messageContent );
 					
 					
 					break;
