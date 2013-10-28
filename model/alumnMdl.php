@@ -26,23 +26,20 @@
 		
 		public function addAlumn( $name, $phone, $mail, $career, $state, $code ){
 			$query = "insert into alumn ( id, name, career, mail, state ) values( ".$code.", \"".$name."\", ".$career.", \"".$mail."\", ".$state."  )";
-			//$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
-			echo $query."<br>";
-			//return $result;
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
 		}
 
 		public function addAcount( $acount, $password ){
 			$query = "insert into acount ( type ,acount, password ) values( 3, \"".$acount."\", \"".$password."\" )";
-			//$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
-			echo $query."<br>";
-			//return $result;
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
 		}
 		
 		public function addExtraValue( $value, $alumnId, $type ){
 			$query = "insert into alumn_extra values( ".$alumnId.", ".$type.", \"".$value."\" )";
-			//$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
-			echo $query."<br>";
-			//return $result;
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
 		}
 		
 	}
