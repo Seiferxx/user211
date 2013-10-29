@@ -22,8 +22,14 @@
 			return $result;
 		}
 		
-		public function passwdRecovery( $mail ){
+		public function passwdTeacherRecovery( $mail ){
 			$this -> query = "select mail from teacher where mail = ".$mail.";";
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
+		}
+		
+		public function passwdAlumnRecovery( $mail ){
+			$this -> query = "select mail from alumn where mail = ".$mail.";";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}

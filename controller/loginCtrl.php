@@ -45,13 +45,12 @@
 					$mail = $_POST[ "mail" ];
 					require_once( "./model/loginMdl.php" );
 					$loginM = new loginMdl( $singleton );
-					$result = $loginM -> passwdRecovery( $mail );
+					$result = $loginM -> passwdTeacherRecovery( $mail );
 					if( $result ){
 						echo "Implementar envio de mensaje a correo electronico";
 					}
 					else{
-						$this -> query = "select mail from alumn where mail = ".$mail.";";
-						$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+						$result = $loginM -> passwdAlumnRecovery( $mail );
 						if( $result ){
 							echo "Implementar envio de mensaje a correo electronico";
 						}
