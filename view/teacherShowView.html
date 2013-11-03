@@ -1,0 +1,50 @@
+        <aside class="toolBar">
+        	<ul>
+        		<li><a href="./index.php?control=teacher&action=add">Agregar Profesor</a></li>
+        		<li><a href="./index.php?control=admin&action=index">Admin</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Profesores</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Esta herramienta le permite dar de alta profesores que desee que
+        		puedan agregar y modificar cursos en el sistema.
+        		<br>
+        		<br>
+        		Para registrar un profesor debera crear una cuenta, esta generara
+        		una contraseña aleatoria que sera enviada al correo del profesor.
+        		La contraseña enviada puede ser cambiada en cualquier momento 
+        		desde la interfaz del profesor.
+        		<br>
+        		<br>
+        		A continuacion se muestran los profesores registrados.
+        	</p>
+        	<form class="form1" name="form" method="post" action="">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox" id="master" onclick="selectAll( )"/></th>
+        					<th>Nombre</th>
+        					<th class="hidden320">Cuenta</th>
+        					<th class="hidden320">Mail</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="checker"><input type="checkbox"/></td>
+        					<td>{name}</td>
+        					<td class="hidden320">{acount}</td>
+        					<td class="hidden320">{email}</td>
+        					<td><input type="button" value="Editar"/></td>
+        					<td><input type="button" value="Eliminar"/></td>
+        				</tr>
+        			</tbody>
+        		</table>
+        		<div class="inputPair">
+        			<input type="button" value="Eliminar marcados"/>
+        		</div>
+        	</form>
+        </section>

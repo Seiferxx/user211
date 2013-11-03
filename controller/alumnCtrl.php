@@ -47,7 +47,7 @@
 					$messageContent = file_get_contents( "./view/alumnMail.html" );
 					$messageContent = str_replace( "{user}", $code, $messageContent );
 					$messageContent = str_replace( "{passwd}", $password, $messageContent );
-					mail( $to, $subject, $headers, $messageContent );
+					mail( $to, $subject, $messageContent, $headers );
 					
 					
 					break;
