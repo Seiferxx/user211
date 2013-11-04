@@ -36,6 +36,7 @@
 			require_once( "./controller/teacherCtrl.php" );
 			$teacher = new teacherCtrl( );
 			$teacher -> run( $singleton );
+			break;
 		default:
 			require_once( "./view/404.html" );
 	}

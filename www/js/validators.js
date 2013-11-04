@@ -69,11 +69,20 @@ function cicleValidatorNew(){
 	var year = document.getElementById( "year" );
 	var init = document.getElementById( "init" );
 	var end = document.getElementById( "end" );
-	var i;
 	var body = document.getElementById( "tableBody" );
+	
+	//Validacion de fechas
+	
+	
 	if( body != null ){
 		
 	}
+	else{
+		
+	}
+	
+	
+	//If everything ok do the submit
 }
 
 function alumnValidator( ){
@@ -280,6 +289,132 @@ function alumnValidator( ){
 	}
 	else{
 		var err = document.getElementById( "errorGit" );
+		err.parentNode.removeChild( err );
+	}
+	if( !flag ){
+		document.form.submit( );
+	}
+}
+
+
+function teacherValidator( ){
+	if( document.getElementById( "errorName" ) == null ){
+		var errorName = document.createElement( "p" );
+		var cleaner = document.createElement( "div" );
+		var name = document.getElementById( "name" );
+		cleaner.setAttribute( "class", "cleaner" );
+		errorName.setAttribute( "class", "errorLine" );
+		errorName.setAttribute( "id", "errorName" );
+		errorName.appendChild( document.createTextNode( "" ) );
+		name.parentNode.insertBefore( errorName, name.nextSibling );
+		name.parentNode.insertBefore( cleaner, name.nextSibling );
+	}
+	if( document.getElementById( "errorCode" ) == null ){
+		var errorCode = document.createElement( "p" );
+		var cleaner = document.createElement( "div" );
+		var code = document.getElementById( "code" );
+		cleaner.setAttribute( "class", "cleaner" );
+		errorCode.setAttribute( "class", "errorLine" );
+		errorCode.setAttribute( "id", "errorCode" );
+		errorCode.appendChild( document.createTextNode( "" ) );
+		code.parentNode.insertBefore( errorCode, code.nextSibling );
+		code.parentNode.insertBefore( cleaner, code.nextSibling );
+	}
+	if( document.getElementById( "errorPhone" ) == null ){
+		var errorPhone = document.createElement( "p" );
+		var cleaner = document.createElement( "div" );
+		var phone = document.getElementById( "phone" );
+		cleaner.setAttribute( "class", "cleaner" );
+		errorPhone.setAttribute( "class", "errorLine" );
+		errorPhone.setAttribute( "id", "errorPhone" );
+		errorPhone.appendChild( document.createTextNode( "" ) );
+		phone.parentNode.insertBefore( errorPhone, phone.nextSibling );
+		phone.parentNode.insertBefore( cleaner, phone.nextSibling );
+	}
+	if( document.getElementById( "errorMail" ) == null ){
+		var errorMail = document.createElement( "p" );
+		var cleaner = document.createElement( "div" );
+		var mail = document.getElementById( "mail" );
+		cleaner.setAttribute( "class", "cleaner" );
+		errorMail.setAttribute( "class", "errorLine" );
+		errorMail.setAttribute( "id", "errorMail" );
+		errorMail.appendChild( document.createTextNode( "" ) );
+		mail.parentNode.insertBefore( errorMail, mail.nextSibling );
+		mail.parentNode.insertBefore( cleaner, mail.nextSibling );
+	}
+	
+	var name = document.getElementById( "name" );
+	var phone = document.getElementById( "phone" );
+	var code = document.getElementById( "code" );
+	var mail = document.getElementById( "mail" );
+	
+	var nameRegex = /(\w+(\s)?)+/;
+	var acountRegex = /\w+\.\w+/;
+	var numberRegex = /\d+/;
+	var mailRegex = /(\w+(\.|\-)?)+@(\w+(\.\-)?)+/;
+	
+	var error1 = "Campo obligatorio";
+	var error2 = document.createTextNode( "Nombre invalido" );
+	var error4 = document.createTextNode( "Codigo invalido" );
+	var error5 = document.createTextNode( "Telefono invalido" );
+	var error6 = document.createTextNode( "Correo invalido" );
+	
+	var flag = false;
+	
+	if( name.value.match( nameRegex ) == null ){
+		flag = true;
+		var err = document.getElementById( "errorName" );
+		if( name.value.length == 0 ){
+			err.replaceChild( document.createTextNode( error1 ), err.firstChild );
+		}
+		else{
+			err.replaceChild( error2, err.firstChild );
+		}
+	}
+	else{
+		var err = document.getElementById( "errorName" );
+		err.parentNode.removeChild( err );
+	}
+	if( phone.value.match( numberRegex ) == null ){
+		flag = true;
+		var err = document.getElementById( "errorPhone" ); 
+		if( phone.value.length == 0 ){
+			err.replaceChild( document.createTextNode( error1 ), err.firstChild );
+		}
+		else{
+			err.replaceChild( error5, err.firstChild );
+		}
+	}
+	else{
+		var err = document.getElementById( "errorPhone" );
+		err.parentNode.removeChild( err );
+	}
+	if( code.value.match( numberRegex ) == null ){
+		flag = true;
+		var err = document.getElementById( "errorCode" ); 
+		if( code.value.length == 0 ){
+			err.replaceChild( document.createTextNode( error1 ), err.firstChild );
+		}
+		else{
+			err.replaceChild( error4, err.firstChild );
+		}
+	}
+	else{
+		var err = document.getElementById( "errorCode" );
+		err.parentNode.removeChild( err );
+	}
+	if( mail.value.match( mailRegex ) == null ){
+		flag = true;
+		var err = document.getElementById( "errorMail" ); 
+		if( mail.value.length == 0 ){
+			err.replaceChild( document.createTextNode( error1 ), err.firstChild );
+		}
+		else{
+			err.replaceChild(  error6, err.firstChild );
+		}
+	}
+	else{
+		var err = document.getElementById( "errorMail" );
 		err.parentNode.removeChild( err );
 	}
 	if( !flag ){

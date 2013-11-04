@@ -26,6 +26,7 @@
 								header( "Location: ./index.php?control=admin&action=index" );
 								break;
 							case "TEACHER":
+								header( "Location: ./index.php?control=teacher&action=index" );
 								break;
 							case "ALUMN":
 								break;
