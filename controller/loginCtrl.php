@@ -21,14 +21,22 @@
 					$dbKey = $row[ 0 ];
 					$type = $row[ 1 ];
 					if( $dbKey == $passwd ){
+						session_start( );
 						switch( $type ){
 							case "ADMINISTRATOR":
 								header( "Location: ./index.php?control=admin&action=index" );
+								$_SESSION[ "user" ] = $user;
+								$_SESSION[ "key" ] = "lockpick";
 								break;
 							case "TEACHER":
 								header( "Location: ./index.php?control=teacher&action=index" );
+								$_SESSION[ "user" ] = $user;
+								$_SESSION[ "key" ] = "philips";
 								break;
 							case "ALUMN":
+								header( "Location: ./index.php?control=alumn&action=index" );
+								$_SESSION[ "user" ] = $user;
+								$_SESSION[ "key" ] = "waxKey";
 								break;
 						}
 					}
@@ -37,7 +45,23 @@
 					}
 					break;
 				case "signIn":
-					require_once( "./view/loginView.html" );
+					session_start( );
+					if( !isset( $_SESSION[ 'user' ] ) ){
+						require_once( "./view/loginView.html" );
+					}
+					else{
+						switch( $_SESSION[ 'key' ] ){
+							case "lockpick":
+								header( "Location: ./index.php?control=admin&action=index" );
+								break;
+							case "philips":
+								header( "Location: ./index.php?control=teacher&action=index" );
+								break;
+							case "ALUMN":
+								header( "Location: ./index.php?control=alumn&action=index" );
+								break;
+						}
+					}
 					break;
 				case "passwdRecovery":
 					require_once( "./view/passwdRecoveryView.html" );
