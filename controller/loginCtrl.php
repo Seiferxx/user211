@@ -31,7 +31,7 @@
 							case "TEACHER":
 								header( "Location: ./index.php?control=teacher&action=index" );
 								$_SESSION[ "user" ] = $user;
-								$_SESSION[ "key" ] = "philips";
+								$_SESSION[ "key" ] = "phillips";
 								break;
 							case "ALUMN":
 								header( "Location: ./index.php?control=alumn&action=index" );
@@ -54,14 +54,21 @@
 							case "lockpick":
 								header( "Location: ./index.php?control=admin&action=index" );
 								break;
-							case "philips":
+							case "phillips":
 								header( "Location: ./index.php?control=teacher&action=index" );
 								break;
-							case "ALUMN":
+							case "waxKey":
 								header( "Location: ./index.php?control=alumn&action=index" );
 								break;
 						}
 					}
+					break;
+				case "signOut":
+					session_start( );
+					session_destroy( );
+					session_unset( );
+					setcookie( session_name( ), ' ', time ( ) - 3600 );
+					header( "Location: ./index.php?control=login&action=signIn" );
 					break;
 				case "passwdRecovery":
 					require_once( "./view/passwdRecoveryView.html" );

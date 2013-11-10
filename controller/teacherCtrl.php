@@ -12,9 +12,9 @@
  
 		public function run( $singleton ){
 			session_start( );
-			if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
-				switch( $_GET[ "action" ] ){
-					case "show":
+			switch( $_GET[ "action" ] ){
+				case "show":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						require_once( "./model/teacherMdl.php" );
 						$teacher = new teacherMdl( $singleton );
 						$result = $teacher -> show( );
@@ -36,9 +36,13 @@
 						echo $header;
 						echo $content;
 						echo $footer;
-					
-						break;
-					case "add":
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				case "add":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/teacherCreateView.html" );
 						$footer = file_get_contents( "./view/footer.html" );
@@ -46,10 +50,20 @@
 						echo $header;
 						echo $content;
 						echo $footer;
-						break;
-					case "register":
-						break;
-					case "index":
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				case "register":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				case "index":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "phillips" ){
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/teacherIndex.html" );
 						$footer = file_get_contents( "./view/footer.html" );
@@ -57,8 +71,13 @@
 						echo $header;
 						echo $content;
 						echo $footer;
-						break;
-					case "config":
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				case "config":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "phillips" ){
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/configView.html" );
 						$footer = file_get_contents( "./view/footer.html" );
@@ -66,13 +85,13 @@
 						echo $header;
 						echo $content;
 						echo $footer;
-						break;
-					default:
-						require_once( "./view/404.html" );
-				}
-			}
-			else{
-				require_once( "./view/401.html" );
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				default:
+					require_once( "./view/404.html" );
 			}
 		}
 		
