@@ -15,7 +15,7 @@
 		}
 		
 		public function show(  ){
-			$query = "select * from teacher";
+			$query = "select * from teacher where status != 0 order by name ";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			while( $row = $result -> fetch_assoc( ) ){
 				$rows[ ] = $row;
@@ -31,7 +31,14 @@
 		
 		public function addAcount( $acount, $password ){
 			$query = "insert into acount ( type ,acount, password ) values( 2, \"".$acount."\", \"".$password."\" )";
-			$result = $this -> connection -> query( $query ) or die( "DB Error: Query2" );
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
+		}
+		
+		public function deleteTeacher( $id ){
+			//Hacer borrado logico en acount y teacher
+			$query = "update teacher set status=0 where id = ".$id;
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}
 		

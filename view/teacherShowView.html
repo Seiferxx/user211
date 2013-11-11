@@ -13,8 +13,8 @@
         		<br>
         		<br>
         		Para registrar un profesor debera crear una cuenta, esta generara
-        		una contraseña aleatoria que sera enviada al correo del profesor.
-        		La contraseña enviada puede ser cambiada en cualquier momento 
+        		una contraseÃ±a aleatoria que sera enviada al correo del profesor.
+        		La contraseÃ±a enviada puede ser cambiada en cualquier momento 
         		desde la interfaz del profesor.
         		<br>
         		<br>
@@ -34,12 +34,12 @@
         			</thead>
         			<tbody>
         				<tr>
-        					<td class="checker"><input type="checkbox" id="checkbox{id}"/></td>
+        					<td class="checker"><input type="checkbox" id="{id}"/></td>
         					<td>{name}</td>
         					<td class="hidden320">{id}</td>
         					<td class="hidden320">{email}</td>
-        					<td><input type="button" value="Editar"  id="edit{id}" onclick=""/></td>
-        					<td><input type="button" value="Eliminar" id="delete{id}"  onclick=""/></td>
+        					<td><input type="button" value="Editar"  id="edit{id}" onclick="editTeacher({id})"/></td>
+        					<td><input type="button" value="Eliminar" id="delete{id}"  onclick="deleteTeacher({id})"/></td>
         				</tr>
         			</tbody>
         		</table>

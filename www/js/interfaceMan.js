@@ -149,3 +149,9 @@ function activateGit( ){
 	}
 }
 
+function deleteTeacher( id ){
+	var _confirm = confirm("Esta seguro que desea eliminar a este profesor?");
+	if( _confirm ){
+		window.location.href="./index.php?control=teacher&action=delete&id=" + id;
+	}
+}

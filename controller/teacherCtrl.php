@@ -55,6 +55,23 @@
 						require_once( "./view/401.html" );
 					}
 					break;
+				case "delete":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
+						if( isset( $_GET[ "id" ] )  ){
+							$id = 
+							require_once( "./model/teacherMdl.php" );
+							$teacherMdl = new teacherMdl( $singleton );
+							$teacherMdl -> deleteTeacher( $id );
+							header( "Location: ./index.php?control=teacher&action=show" );
+						}
+						else{
+							//Error de peticion
+						}
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
 				case "register":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						$name = $_POST[ "name" ];

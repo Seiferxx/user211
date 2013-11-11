@@ -17,19 +17,21 @@
 		}
 		
 		public function authenticate( $user, $passwd ){
-			$this -> query = "select acount.password, acount_type.type from acount inner join acount_type on acount.type = acount_type.id  where acount = \"".$user."\";";
+			$this -> query = "select acount.password, acount_type.type from acount ".
+							 "inner join acount_type on acount.type = acount_type.id  ".
+							 "where acount = \"".$user."\" and status != 0";
 			$result =  $this -> connection -> query( $this -> query ) or die( "DB Error: Query" );
 			return $result;
 		}
 		
 		public function passwdTeacherRecovery( $mail ){
-			$this -> query = "select mail from teacher where mail = ".$mail.";";
+			$this -> query = "select mail from teacher where mail = ".$mail." and status != 0";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}
 		
 		public function passwdAlumnRecovery( $mail ){
-			$this -> query = "select mail from alumn where mail = ".$mail.";";
+			$this -> query = "select mail from alumn where mail = ".$mail." and status != 0";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}
