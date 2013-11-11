@@ -57,6 +57,15 @@
 					break;
 				case "register":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
+						$name = $_POST[ "name" ];
+						$phone = $_POST[ "phone" ];
+						$code = $_POST[ "code" ];
+						$mail = $_POST[ "mail" ];
+						$passwd = substr( $name , 0, 1 ).$code;
+
+						//Insertar en la base de datos
+
+						//Enviar correo
 					}
 					else{
 						require_once( "./view/401.html" );
