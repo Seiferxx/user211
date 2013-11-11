@@ -62,10 +62,22 @@
 						$code = $_POST[ "code" ];
 						$mail = $_POST[ "mail" ];
 						$passwd = substr( $name , 0, 1 ).$code;
+						
+						require_once ( "./model/teacherMdl.php" );
+						$teacherMdl = new teacherMdl( $singleton );
+						$teacherMdl -> addTeacher( $name, $mail, $phone, $code );
+						$teacherMdl -> addAcount( $code, sha1( $passwd ) );
 
-						//Insertar en la base de datos
-
-						//Enviar correo
+						$to = $mail;
+						$subject = "Registro de cuenta en SUCE";
+						$headers = "From: suceAcounts@sucesys.udg\n\rMIME-Version: 1.0\n\rContent-Type: text/html; charset=UTF-8\n\r";
+						$messageContent = file_get_contents( "./view/teacherMail.html" );
+						$messageContent = str_replace( "{user}", $code, $messageContent );
+						$messageContent = str_replace( "{passwd}", $passwd, $messageContent );
+						mail( $to, $subject, $messageContent, $headers );
+						
+						header( "Location: ./index.php?control=teacher&action=show" );
+						
 					}
 					else{
 						require_once( "./view/401.html" );

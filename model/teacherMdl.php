@@ -14,7 +14,7 @@
 			$this ->connection = $singleton;
 		}
 		
-		function show(  ){
+		public function show(  ){
 			$query = "select * from teacher";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			while( $row = $result -> fetch_assoc( ) ){
@@ -23,6 +23,17 @@
 			return $rows;
 		}
 		
+		public function addTeacher( $name, $mail, $phone, $code ){
+			$query = "insert into teacher ( name, mail, phone, id ) values( \"".$name."\", \"".$mail."\", \"".$phone."\", ".$code .")";
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
+		}
+		
+		public function addAcount( $acount, $password ){
+			$query = "insert into acount ( type ,acount, password ) values( 2, \"".$acount."\", \"".$password."\" )";
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query2" );
+			return $result;
+		}
 		
 	}
 ?>
