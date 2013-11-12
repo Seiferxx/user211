@@ -74,6 +74,19 @@
 						require_once( "./view/401.html" );
 					}
 					break;
+				case "edit":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
+						if( isset( $_GET[ "id" ] ) ){
+						}
+						else{
+							//Error de peticion
+							echo "???????????????????";
+						}
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
 				case "register":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						$name = $_POST[ "name" ];

@@ -41,8 +41,16 @@
 						}
 					}
 					else{
-						echo "Implementar pantalla de inicio y error de acceso";
+						header( "Location: ./index.php?control=login&action=badLogin" );
 					}
+					break;
+				case "badLogin":
+					$login = file_get_contents( "./view/loginView.html" );
+					$script = "<script>\n";
+					$script = $script.file_get_contents( "./www/js/loginGenerated.js" );
+					$script = $script."\n</script>\n";						
+					$login = str_replace( "<! badLoginScript>", $script, $login );
+					echo $login;
 					break;
 				case "signIn":
 					session_start( );
@@ -67,7 +75,7 @@
 					session_start( );
 					session_destroy( );
 					session_unset( );
-					setcookie( session_name( ), ' ', time ( ) - 3600 );
+					setcookie( session_name( ), ' ', time( ) - 3600 );
 					header( "Location: ./index.php?control=login&action=signIn" );
 					break;
 				case "passwdRecovery":
