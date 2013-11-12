@@ -155,3 +155,7 @@ function deleteTeacher( id ){
 		window.location.href="./index.php?control=teacher&action=delete&id=" + id;
 	}
 }
+
+function editTeacher( id ){
+	window.location.href="./index.php?control=teacher&action=edit&id=" + id;
+}

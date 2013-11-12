@@ -36,8 +36,13 @@
 		}
 		
 		public function deleteTeacher( $id ){
-			//Hacer borrado logico en acount y teacher
-			$query = "update teacher set status=0 where id = ".$id;
+			$query = "update teacher set status = 0 where id = ".$id;
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			return $result;
+		}
+		
+		public function deleteAcount( $id ){
+			$query = "update acount set status = 0 where id = ".$id;
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}

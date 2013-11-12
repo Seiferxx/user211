@@ -58,14 +58,16 @@
 				case "delete":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						if( isset( $_GET[ "id" ] )  ){
-							$id = 
+							$id = $_GET[ "id" ];
 							require_once( "./model/teacherMdl.php" );
 							$teacherMdl = new teacherMdl( $singleton );
 							$teacherMdl -> deleteTeacher( $id );
+							$teacherMdl -> deleteAcount( $id );
 							header( "Location: ./index.php?control=teacher&action=show" );
 						}
 						else{
 							//Error de peticion
+							echo "???????????????????";
 						}
 					}
 					else{
