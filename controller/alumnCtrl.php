@@ -19,11 +19,11 @@
 					$mail		= $_POST[ "mail" ];
 					$career		= $_POST[ "career" ];
 					$password 	= substr( $name , 0, 1 ).$code;
-					$state = 1;
+					$status = 1;
 
 					require_once( "./model/alumnMdl.php" );
 					$alumnMdl = new alumnMdl( $singleton );
-					$alumnMdl -> addAlumn( $name, $phone, $mail, $career, $state, $code );
+					$alumnMdl -> addAlumn( $name, $phone, $mail, $career, $status, $code );
 					$alumnMdl -> addAcount( $code, sha1( $password ) );
 					
 					if( isset( $_POST[ "git" ] ) ){

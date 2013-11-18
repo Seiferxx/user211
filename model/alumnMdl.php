@@ -24,8 +24,8 @@
 			return $rows;	
 		}
 		
-		public function addAlumn( $name, $phone, $mail, $career, $state, $code ){
-			$query = "insert into alumn ( id, name, career, mail, state ) values( ".$code.", \"".$name."\", ".$career.", \"".$mail."\", ".$state."  )";
+		public function addAlumn( $name, $phone, $mail, $career, $status, $code ){
+			$query = "insert into alumn ( id, name, career, mail, status ) values( ".$code.", \"".$name."\", ".$career.", \"".$mail."\", ".$status."  )";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
 			return $result;
 		}
