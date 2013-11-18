@@ -132,6 +132,10 @@ header{
 	margin-bottom: 0%;
 }
 
+.selected:hover{
+	background-color: white;
+}
+
 #header_2{
 	float: left;
 	margin-top: 10%;

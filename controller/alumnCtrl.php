@@ -49,7 +49,7 @@
 					$messageContent = str_replace( "{passwd}", $password, $messageContent );
 					mail( $to, $subject, $messageContent, $headers );
 					
-					
+					header( "Location: ./index.php?control=alumn&action=show" );
 					break;
 				case "add":
 					require_once( "./model/alumnMdl.php" );
@@ -74,6 +74,30 @@
 					echo $header;
 					echo $content;
 					echo $footer; 
+					break;
+				case "show":
+					require_once( "./model/alumnMdl.php" );
+					$alumnMdl = new alumnMdl( $singleton );
+					$header = file_get_contents( "./view/header.html");
+					$content = file_get_contents( "./view/alumnShowView.html" );
+					$footer = file_get_contents( "./view/footer.html" );
+					$result = $alumnMdl -> getAlumns( );
+					
+					$row_start = strrpos( $content,'<tr>' );
+					$row_end = strrpos( $content,'</tr>' ) + 5;
+					$sRow = substr( $content,$row_start,$row_end-$row_start );
+					$rows = "";
+					foreach( $result as $row ){
+						$nRow = $sRow;
+						$dict = array( "{id}" => $row[ "id" ],"{name}" => $row[ "name" ],"{mail}" => $row[ "mail" ]);
+						$nRow = strtr( $nRow, $dict );
+						$rows .= $nRow;
+					}
+					$content = str_replace( $sRow, $rows, $content );
+					
+					echo $header;
+					echo $content;
+					echo $footer;
 					break;
 				default:
 					require_once( "./view/404.html" );

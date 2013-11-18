@@ -150,7 +150,7 @@ function activateGit( ){
 }
 
 function deleteTeacher( id ){
-	var _confirm = confirm("Esta seguro que desea eliminar a este profesor?");
+	var _confirm = confirm( "Esta seguro que desea eliminar a este profesor?" );
 	if( _confirm ){
 		window.location.href="./index.php?control=teacher&action=delete&id=" + id;
 	}
@@ -159,3 +159,45 @@ function deleteTeacher( id ){
 function editTeacher( id ){
 	window.location.href="./index.php?control=teacher&action=edit&id=" + id;
 }
+
+function deleteAlumn( id ){
+	var _confirm = confirm( "Esta seguro que desea eliminar a este Alumno?" );
+	if( _confirm ){
+		window.location.href="./index.php?control=alumn&action=delete&id=" + id;
+	}
+}
+
+function editTeacher( id ){
+	window.location.href="./index.php?control=alumn&action=edit&id=" + id;
+}
+
+function showDataAlumn( id ){
+	var r = document.getElementById( "dataBox" );
+	if( r != null ){
+		r.parentNode.removeChild( r );
+	}
+	var element = document.getElementById( id ).parentNode;
+	row = element.parentNode;
+	var nrow = document.createElement( "tr" );
+	nrow.setAttribute( "id", "dataBox" );
+	var nelement = document.createElement( "td" );
+	nelement.setAttribute( "colspan", "6" );
+	nrow.appendChild( nelement );
+	row.parentNode.insertBefore( nrow, row.nextSibling );
+}
+
+function showDataTeacher( id ){
+	var r = document.getElementById( "dataBox" );
+	if( r != null ){
+		r.parentNode.removeChild( r );
+	}
+	var element = document.getElementById( id ).parentNode;
+	row = element.parentNode;
+	var nrow = document.createElement( "tr" );
+	nrow.setAttribute( "id", "dataBox" );
+	var nelement = document.createElement( "td" );
+	nelement.setAttribute( "colspan", "6" );
+	nrow.appendChild( nelement );
+	row.parentNode.insertBefore( nrow, row.nextSibling );
+}
+

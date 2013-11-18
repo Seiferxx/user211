@@ -42,6 +42,14 @@
 			return $result;
 		}
 		
+		public function getAlumns( ){
+			$query = "select name, id, mail from alumn";
+			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			while( $row = $result -> fetch_assoc( ) ){
+				$rows[ ] = $row;
+			}
+			return $rows;
+		}
 	}
 
 

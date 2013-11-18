@@ -1,0 +1,45 @@
+        <aside class="toolBar">
+        	<ul>
+        		<li><a href="./index.php?control=alumn&action=add">Agregar Alumnos</a></li>
+        		<li><a href="./index.php?control=alumn&action=multi">Importar CSV</a></li>
+        		<li><a href="./index.php?control=teacher&action=index">Profesor</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Alumnos</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Esta herramienta le permite agregar a los alumnos que participan
+        		en los grupos que crea.
+        		<br>
+        		<br>
+        		A continuacion se muestran los alumnos registrados.
+        	</p>
+        	<form class="form1" name="form" action="" method="post">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox" id="master" onclick="selectAll( )" /></th>
+        					<th>Nombre</th>
+        					<th class="hidden320">Codigo</th>
+        					<th class="hidden320">Correo</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td class="checker"><input type="checkbox" id={id} name={id}/></td>
+        					<td class="selected" onclick="showDataAlumn( {id} )">{name}</td>
+        					<td class="hidden320">{id}</td>
+        					<td class="hidden320">{mail}</td>
+        					<td><input type="button" value="Editar" id="edit{id}" name="edit{id}" onclick="editAlumn( {id} )"/></td>
+        					<td><input type="button" value="Eliminar" id="delete{id}" name="delete{id}" onclick="deleteAlumn( {id} )"/></td>
+        				</tr>
+        			</tbody>
+        		</table>
+        		<div class="inputPair">
+        			<input type="button" value="Eliminar marcados"/>
+        		</div>
+        	</form>
+        </section>
