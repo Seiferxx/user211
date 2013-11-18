@@ -1,6 +1,6 @@
         <aside class="toolBar">
         	<ul>
-        		<li><a href="./index.php?control=admin&action=index">Admin</a></li>
+        		<li><a href="./index.php?control={user}&action=index">{name}</a></li>
         	</ul>
         </aside>
         <section class="content">
@@ -13,21 +13,21 @@
         		<strong>Cambiar contraseña</strong>
         	</p>
         	<div class="cleaner"></div>
-        	<form class="form1">
+        	<form class="form1" method="post" action="./index.php?control={user}&action=changePassword">
         		<div class="inputPair">
 					<label class="inputLabel2">Contraseña actual</label>
-					<input type="password" />
+					<input type="password" id="oldPasswd" name="oldPasswd"/>
         		</div>
         		<div class="cleaner"></div>
         		<div class="inputPair">
 					<label class="inputLabel2">Contraseña nueva</label>
-					<input type="password" />
+					<input type="password" id="newPasswd1" name="newPasswd1"/>
         		</div>
         		<div class="cleaner"></div>
         		<div class="inputPair">
 					<label class="inputLabel2">Repetir Contraseña</label>
-					<input type="password" />
+					<input type="password" id="newPasswd2" name="newPasswd2"/>
         		</div>
-        		<input class="endButton" type="button" value="Cambiar" />
+        		<input class="endButton" type="button" value="Cambiar" onclick="changePasswordValidator( )"/>
         	</form>
         </section>

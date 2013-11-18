@@ -49,7 +49,7 @@
 					$script = "<script>\n";
 					$script = $script.file_get_contents( "./www/js/loginGenerated.js" );
 					$script = $script."\n</script>\n";						
-					$login = str_replace( "<! badLoginScript>", $script, $login );
+					$login = str_replace( "<--! badLoginScript-->", $script, $login );
 					echo $login;
 					break;
 				case "signIn":
@@ -95,6 +95,7 @@
 							echo "Implementar envio de mensaje a correo electronico";
 						}
 						else{
+							//cambiar por ajax
 							echo "Implementar pantalla de error para correo inexistente";	
 						}
 					}

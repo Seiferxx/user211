@@ -66,8 +66,7 @@
 							header( "Location: ./index.php?control=teacher&action=show" );
 						}
 						else{
-							//Error de peticion
-							echo "???????????????????";
+							require_once( "./view/400.html" );
 						}
 					}
 					else{
@@ -77,10 +76,19 @@
 				case "edit":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
 						if( isset( $_GET[ "id" ] ) ){
+							$header = file_get_contents( "./view/header.html" );
+							$content = file_get_contents( "./view/teacherCreateView.html" );
+							$footer = file_get_contents( "./view/footer.html" );
+							$script = file_get_contents( "./www/js/teacherGenerated.js" );
+							
+							$footer = str_replace( "<!-- editTeacher-->", $script, $footer );
+							
+							echo $header;
+							echo $content;
+							echo $footer;
 						}
 						else{
-							//Error de peticion
-							echo "???????????????????";
+							require_once( "./view/400.html" );
 						}
 					}
 					else{
@@ -109,7 +117,6 @@
 						mail( $to, $subject, $messageContent, $headers );
 						
 						header( "Location: ./index.php?control=teacher&action=show" );
-						
 					}
 					else{
 						require_once( "./view/401.html" );
@@ -129,11 +136,30 @@
 						require_once( "./view/401.html" );
 					}
 					break;
+				case "doc":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "phillips" ){
+						$header = file_get_contents( "./view/header.html" );
+						$content = file_get_contents( "./view/doc.html" );
+						$footer = file_get_contents( "./view/footer.html" );
+						
+						$content = str_replace( "{user}", "teacher" , $content );
+							
+						echo $header;
+						echo $content;
+						echo $footer;
+					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
 				case "config":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "phillips" ){
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/configView.html" );
 						$footer = file_get_contents( "./view/footer.html" );
+						
+						$content = str_replace( "{user}", "teacher" , $content );
+						$content = str_replace( "{name}", "Profesor" , $content );
 					
 						echo $header;
 						echo $content;
@@ -147,6 +173,5 @@
 					require_once( "./view/404.html" );
 			}
 		}
-		
 	}
 ?>
