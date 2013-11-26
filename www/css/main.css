@@ -115,6 +115,11 @@ header{
 	clear: both;
 }
 
+#dataContainer{
+	text-align: left;
+	padding: 2%;
+}
+
 #header_image{
 	width: 130px;
 	height: 130px;

@@ -212,6 +212,7 @@ function showDataCicle( id ){
 	nrow.setAttribute( "id", "dataBox" );
 	var nelement = document.createElement( "td" );
 	nelement.setAttribute( "colspan", "6" );
+	nelement.setAttribute( "id", "dataContainer" );
 	nrow.appendChild( nelement );
 	row.parentNode.insertBefore( nrow, row.nextSibling );
 	

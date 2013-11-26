@@ -30,10 +30,25 @@ function getCicleData( id ){
 	ajax.onreadystatechange = function( ){
 		if( ajax.readyState == 4 ){
 			var json = eval( ajax.responseText );
-			alert( json ); 
+			var container = document.getElementById( "dataContainer" );
+			var title = document.createElement( "h4" );
+			var flag = false;
+			title.appendChild( document.createTextNode( "Dias libres" ) );
+			container.appendChild( title );
+			for( i in json ){
+				flag = true;
+				container.appendChild( document.createTextNode( "Dia: "+json[ i ].day ) );
+				container.appendChild( document.createElement( "br" ) );
+				container.appendChild( document.createTextNode( "Razon: "+json[ i ].reason ) );
+				container.appendChild( document.createElement( "br" ) );
+				container.appendChild( document.createElement( "br" ) );
+			}
+			if( !flag ){
+				container.appendChild( document.createTextNode( "Este Ciclo Escolar no contiene ningun dia libre" ) );
+			}
 		}
 	}
-	ajax.send( "id="+id );
+	ajax.send( "id="+id ); 
 }
 
 

@@ -11,12 +11,12 @@
 		$id = $_POST[ "id" ];
 		$connection = new mysqli(  $server, $user, $passwd, $database );
 		$query = "select day, reason from free_days where cicle = $id";
-		$result = $connection -> query( $query );
+		$result = $connection -> query( $query ) or die( "dbError: Query" );
+		$rows = array( );
 		while( $row = $result -> fetch_assoc( ) ){
 			$rows[ ] = $row;
 		}
-		//echo json_encode( $rows );
-		echo $rows;
+		echo json_encode( $rows );
 		$connection -> close( );
 	}
 ?>
