@@ -214,4 +214,6 @@ function showDataCicle( id ){
 	nelement.setAttribute( "colspan", "6" );
 	nrow.appendChild( nelement );
 	row.parentNode.insertBefore( nrow, row.nextSibling );
+	
+	getCicleData( id );
 }
