@@ -201,3 +201,17 @@ function showDataTeacher( id ){
 	row.parentNode.insertBefore( nrow, row.nextSibling );
 }
 
+function showDataCicle( id ){
+	var r = document.getElementById( "dataBox" );
+	if( r != null ){
+		r.parentNode.removeChild( r );
+	}
+	var element = document.getElementById( id ).parentNode;
+	row = element.parentNode;
+	var nrow = document.createElement( "tr" );
+	nrow.setAttribute( "id", "dataBox" );
+	var nelement = document.createElement( "td" );
+	nelement.setAttribute( "colspan", "6" );
+	nrow.appendChild( nelement );
+	row.parentNode.insertBefore( nrow, row.nextSibling );
+}

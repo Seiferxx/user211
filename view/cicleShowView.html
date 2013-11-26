@@ -9,7 +9,7 @@
         	<div class="cleaner"></div>
         	<p class="contentText">
         		Esta herramienta le permite agregar ciclos escolares para ser usados por
-        		profesores, para cada curso se debe indicar la fecha de inicio y
+        		profesores, para cada ciclo se debe indicar la fecha de inicio y
         		termino y los dias en los que no habra clases incluyendo una breve
         		explicacion sobre las causas.
         		<br>
@@ -30,8 +30,8 @@
         			</thead>
         			<tbody>
         				<tr>
-        					<td class="checker"><input type="checkbox" id="checkbox{id}"></td>
-        					<td> {cicle} </td>
+        					<td class="checker"><input type="checkbox" id="{id}"></td>
+        					<td onclick="showDataCicle( {id} )" class="selected"> {cicle} </td>
         					<td class="hidden320"> {start} </td>
         					<td class="hidden320"> {end} </td>
         					<td><input type="button" value="Editar" id="edit{id}" onclick=""></td>

@@ -70,19 +70,21 @@ function cicleValidatorNew(){
 	var init = document.getElementById( "init" );
 	var end = document.getElementById( "end" );
 	var body = document.getElementById( "tableBody" );
-	
-	//Validacion de fechas
-	
+	var days = new Array( );
+	var reasons = new Array( );
+	var flag = true;
 	
 	if( body != null ){
-		
+		for( i = 0; i < body.childNodes.length; i++ ){
+			reasons[ i ] = document.getElementById( "reason"+i ).value;
+			days[ i ] = document.getElementById( "day"+i ).value;
+		}
+		document.form.submit( );
 	}
 	else{
-		
+		document.form.submit( );
 	}
 	
-	
-	//If everything ok do the submit
 }
 
 function alumnValidator( ){
