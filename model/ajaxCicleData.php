@@ -7,14 +7,16 @@
 	*Cuauhtemoc Herrera Muñoz
 	*/
 	require_once( "../controller/config.inc" );
-	$id = $_POST[ "id" ];
-	$connection = new mysqli(  $server, $user, $passwd, $database );
-	$query = "select day, reason from free_days where cicle = 17";
-	$result = $connection -> query( $query );
-	while( $row = $result -> fetch_assoc( ) ){
-		$rows[ ] = $row;
+	if( isset( $_POST[ "id" ] ) ){
+		$id = $_POST[ "id" ];
+		$connection = new mysqli(  $server, $user, $passwd, $database );
+		$query = "select day, reason from free_days where cicle = $id";
+		$result = $connection -> query( $query );
+		while( $row = $result -> fetch_assoc( ) ){
+			$rows[ ] = $row;
+		}
+		//echo json_encode( $rows );
+		echo $rows;
+		$connection -> close( );
 	}
-	echo json_encode( $rows );
-	$connection -> close( );
-	
 ?>
