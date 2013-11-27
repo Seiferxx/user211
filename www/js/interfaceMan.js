@@ -167,8 +167,12 @@ function deleteAlumn( id ){
 	}
 }
 
-function editTeacher( id ){
+function editAlumn( id ){
 	window.location.href="./index.php?control=alumn&action=edit&id=" + id;
+}
+
+function editCicle( id ){
+	window.location.href="./index.php?control=&action=edit&id=" + id;
 }
 
 function showDataAlumn( id ){

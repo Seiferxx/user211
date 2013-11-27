@@ -85,7 +85,9 @@
 					break;
 				case "edit":
 					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
-					
+						$header = file_get_contents( "./view/header.html" );
+						$content = file_get_contents( "./view/cicleCreateView.html" );
+						$footer = file_get_contents( "./view/footer.html" );
 					}
 					else{
 						require_once( "./view/401.html" );
