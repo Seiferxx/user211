@@ -172,7 +172,7 @@ function editAlumn( id ){
 }
 
 function editCicle( id ){
-	window.location.href="./index.php?control=&action=edit&id=" + id;
+	window.location.href="./index.php?control=cicle&action=edit&id=" + id;
 }
 
 function showDataAlumn( id ){

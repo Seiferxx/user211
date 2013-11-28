@@ -68,7 +68,6 @@
 						$cicleMdl -> addCicle( $cicle, $init, $end );
 						
 						$cicleId = $cicleMdl -> getCicleId( $cicle );
-						echo( $cicleId );
 						
 						$freeDayCounter = 0;
 						while( isset( $_POST[ "reason".$freeDayCounter ] ) ){
@@ -84,10 +83,22 @@
 					}
 					break;
 				case "edit":
-					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" ){
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" && isset( $_GET[ "id" ] ) ){
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/cicleCreateView.html" );
 						$footer = file_get_contents( "./view/footer.html" );
+
+						$script = "<script>\n";
+						$sc = file_get_contents( "./www/js/cicleGenerated.js" );
+						$sc = str_replace( "{id}", $_GET[ "id" ], $sc );
+						$script .= $sc; 
+						$script .= "</script>\n";
+						$footer = str_replace( "<!-- editCicle-->", $script, $footer );
+						$content = str_replace( "action=\"./index.php?control=cicle&action=save\"", "action=\"./index.php?control=cicle&action=\"", $content );
+						
+						echo $header;
+						echo $content;
+						echo $footer;					
 					}
 					else{
 						require_once( "./view/401.html" );

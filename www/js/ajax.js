@@ -51,6 +51,21 @@ function getCicleData( id ){
 	ajax.send( "id="+id ); 
 }
 
+function getCicleEdit( id ){
+	var ajax = createAjax( );
+	ajax.open( "post", "./model/ajaxCicleEdit.php", true );
+	ajax.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
+	ajax.onreadystatechange = function( ){
+		if( ajax.readyState == 4 ){
+			var json = eval( ajax.responseText );
+			
+		}
+	}
+	ajax.send( "id="+id ); 
+}
+
+
+
 
 
 

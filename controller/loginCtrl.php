@@ -45,17 +45,28 @@
 					}
 					break;
 				case "badLogin":
+					$header = file_get_contents( "./view/header.html" );
 					$login = file_get_contents( "./view/loginView.html" );
+					$footer = file_get_contents( "./view/footer.html" );
 					$script = "<script>\n";
 					$script = $script.file_get_contents( "./www/js/loginGenerated.js" );
-					$script = $script."\n</script>\n";						
-					$login = str_replace( "<--! badLoginScript-->", $script, $login );
+					$script = $script."\n</script>\n";	
+					
+					$footer = str_replace( "<!-- badLogin-->", $script, $footer );
+					echo $header;					
 					echo $login;
+					echo $footer;
 					break;
 				case "signIn":
 					session_start( );
 					if( !isset( $_SESSION[ 'user' ] ) ){
-						require_once( "./view/loginView.html" );
+						$header = file_get_contents( "./view/header.html" );
+						$content = file_get_contents( "./view/loginView.html" );
+						$footer = file_get_contents( "./view/footer.html" );
+
+						echo $header;
+						echo $content;
+						echo $footer;
 					}
 					else{
 						switch( $_SESSION[ 'key' ] ){
