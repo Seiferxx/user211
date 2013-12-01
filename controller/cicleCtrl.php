@@ -94,12 +94,19 @@
 						$script .= $sc; 
 						$script .= "</script>\n";
 						$footer = str_replace( "<!-- editCicle-->", $script, $footer );
-						$content = str_replace( "action=\"./index.php?control=cicle&action=save\"", "action=\"./index.php?control=cicle&action=\"", $content );
+						$content = str_replace( "action=\"./index.php?control=cicle&action=save\"", "action=\"./index.php?control=cicle&action=editSave\"", $content );
 						
 						echo $header;
 						echo $content;
 						echo $footer;					
 					}
+					else{
+						require_once( "./view/401.html" );
+					}
+					break;
+				case "editSave":
+					if( isset( $_SESSION[ "key" ] ) && $_SESSION[ "key" ] == "lockpick" && isset( $_GET[ "id" ] ) ){
+					}	
 					else{
 						require_once( "./view/401.html" );
 					}

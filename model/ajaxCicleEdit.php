@@ -11,7 +11,7 @@
 	if( isset( $_POST[ "id" ] ) ){
 		$id = $_POST[ "id" ];
 		$connection = new mysqli(  $server, $user, $passwd, $database );
-		$query = "";
+		$query = "select * from cicle where id = $id";
 		$result = $connection -> query( $query ) or die( "dbError: Query" );
 		$rows = array( );
 		while( $row = $result -> fetch_assoc( ) ){
