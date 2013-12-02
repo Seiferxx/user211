@@ -203,9 +203,11 @@ function showDataTeacher( id ){
 	nelement.setAttribute( "colspan", "6" );
 	nrow.appendChild( nelement );
 	row.parentNode.insertBefore( nrow, row.nextSibling );
+
+	
 }
 
-function showDataCicle( id ){
+function showDataCicle( id ){aliali
 	var r = document.getElementById( "dataBox" );
 	if( r != null ){
 		r.parentNode.removeChild( r );
@@ -217,7 +219,7 @@ function showDataCicle( id ){
 	var nelement = document.createElement( "td" );
 	nelement.setAttribute( "colspan", "6" );
 	nelement.setAttribute( "id", "dataContainer" );
-	nrow.appendChild( nelement );
+	nrow.appendChild( nelement );ali
 	row.parentNode.insertBefore( nrow, row.nextSibling );
 	
 	getCicleData( id );
@@ -241,7 +243,7 @@ function step2( ){
 	th2.appendChild( document.createTextNode( "Porcentaje" ) );
 	var th3 = document.createElement( "th" );
 	th3.appendChild( document.createTextNode( "Hoja Extra?" ) );
-	var th4 = document.createElement( "th" );
+	var th4 = document.createElement( "th" );ali
 	th4.appendChild( document.createTextNode( "N" ) );
 	thRow.appendChild( th1 );
 	thRow.appendChild( th2 );

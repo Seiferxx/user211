@@ -154,6 +154,19 @@ function getTeacherEdit( id ){
 	ajax.send( "id="+id );
 }
 
+function getTeacherData( id ){
+	var ajax = createAjax( );
+	ajax.open( "post", "./model/ajaxTeacherData.php", true );
+	ajax.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
+	ajax.onreadystatechange = function( ){
+		if( ajax.readyState == 4 ){
+			var json = eval( ajax.responseText );
+			alert( json );
+		}
+	}
+	ajax.send( "id="+id );
+}
+
 
 
 
