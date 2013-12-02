@@ -1,0 +1,44 @@
+        <aside class="toolBar">
+        	<ul>
+        		<li><a href="./index.php?control=course&action=add">Agregar curso</a></li>
+        		<li><a href="./index.php?control=teacher&action=index">Profesor</a></li>
+        	</ul>
+        </aside>
+        <section class="content">
+        	<h1 class="contentTitle">Cursos</h1>
+        	<div class="cleaner"></div>
+        	<p class="contentText">
+        		Desde esta seccion podra crear cursos, lo que generara
+        		listas de alumnos, puede agregar alumnos al grupo y 
+        		modificar cursos ya existentes, tambien se generaran hojas 
+        		de evaluacion y en caso de ser requeridas, hojas de evaluacion
+        		extras por cada rubro de la evaluacion.
+        		<br>
+        		<br>
+        		A continuacion se muestra una lista de los cursos que estan a su cargo.
+        	</p>
+        	<form class="form1">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th><input type="checkbox" id="master" onclick="selectAll( )"/></th>
+        					<th>Ciclo escolar</th>
+        					<th>Curso</th>
+        					<th>Alumnos inscritos</th>
+        					<th>Editar</th>
+        					<th>Eliminar</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				<tr>
+        					<td><input type="checkbox" id="{id}"/></td>
+        					<td>{cicle}</td>
+        					<td>{course}</td>
+        					<td>{alumn}</td>
+        					<td><input type="button" value="Editar" id="edit{id}" onclick="editCourse({id})"></td>
+        					<td><input type="button" value="X" id="delete{id}" onclick="deleteCourse({id})"></td>
+        				</tr>
+        			</tbody>
+        		</table>
+        	</form>
+        </section>

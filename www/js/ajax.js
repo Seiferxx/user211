@@ -142,6 +142,18 @@ function getCicleEdit2( id ){
 	ajax.send( "id="+id );
 }
 
+function getTeacherEdit( id ){
+	var ajax = createAjax( );
+	ajax.open( "post", "./model/ajaxTeacherEdit.php", true );
+	ajax.setRequestHeader( "Content-Type", "application/x-www-form-urlencoded" );
+	ajax.onreadystatechange = function( ){
+		if( ajax.readyState == 4 ){
+			var json = eval( ajax.responseText );
+		}
+	}
+	ajax.send( "id="+id );
+}
+
 
 
 

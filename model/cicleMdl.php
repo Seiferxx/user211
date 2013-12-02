@@ -44,6 +44,13 @@
 			return $row[ 0 ];
 		}
 		
+		public function getCicle( ){
+			$this -> query = "select id, cicle from cicle";
+			$result =  $this -> connection -> query( $this -> query ) or die( "DB Error: Query" );
+			$result -> fetch_array( );
+			return $result;
+		}
+		
 	}
 
 

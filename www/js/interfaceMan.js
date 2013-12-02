@@ -222,3 +222,136 @@ function showDataCicle( id ){
 	
 	getCicleData( id );
 }
+
+
+function step2( ){
+	var val = document.getElementById( "n" );
+	var n = val.value;
+	if( n == "" ){
+		//Proceed to finish
+		return -1;
+	}
+	var table = document.createElement( "table" );
+	var thead = document.createElement( "thead" );
+	var thRow = document.createElement( "tr" );
+	var button = document.getElementById( "endButton" );
+	var th1 = document.createElement( "th" );
+	th1.appendChild( document.createTextNode( "Rubro" ) );
+	var th2 = document.createElement( "th" );
+	th2.appendChild( document.createTextNode( "Porcentaje" ) );
+	var th3 = document.createElement( "th" );
+	th3.appendChild( document.createTextNode( "Hoja Extra?" ) );
+	var th4 = document.createElement( "th" );
+	th4.appendChild( document.createTextNode( "N" ) );
+	thRow.appendChild( th1 );
+	thRow.appendChild( th2 );
+	thRow.appendChild( th3 );
+	thRow.appendChild( th4 );
+	table.appendChild( thead );
+	thead.appendChild( thRow );
+	button.parentNode.insertBefore( table, button.nextSibling );
+	var nextButton = document.createElement( "input" );
+	nextButton.setAttribute( "type", "button" );
+	nextButton.setAttribute( "onclick", "step3( )" );
+	nextButton.setAttribute( "value", "Siguiente" );
+	nextButton.setAttribute( "class", "endButton" );
+	table.parentNode.appendChild( nextButton );
+	var tbody = document.createElement( "tbody" );
+	for( var i = 0; i < parseInt( n ); i++ ){
+		var tRow = document.createElement( "tr" );
+		var td1 = document.createElement( "td" );
+		var td2 = document.createElement( "td" );
+		var td3 = document.createElement( "td" );
+		var td4 = document.createElement( "td" );
+		var r = document.createElement( "input" );
+		r.setAttribute( "id", "r" + i );
+		r.setAttribute( "type", "text" );
+		var val = document.createElement( "input" );
+		val.setAttribute( "id", "val" + i );
+		val.setAttribute( "type", "number" );
+		val.setAttribute( "min", "0" );
+		var extra = document.createElement( "input" );
+		extra.setAttribute( "id", "extra" + i );
+		extra.setAttribute( "type", "checkbox" );
+		extra.setAttribute( "onclick", "activateN( " + i + " )" ); 
+		var nr = document.createElement( "input" );
+		nr.setAttribute( "id", "nr" + i );
+		nr.setAttribute( "type", "number" );
+		nr.setAttribute( "min", "0" );
+		nr.disabled = true;
+		td1.appendChild( r );
+		td2.appendChild( val );
+		td3.appendChild( extra );
+		td4.appendChild( nr );
+		tRow.appendChild( td1 );
+		tRow.appendChild( td2 );
+		tRow.appendChild( td3 );
+		tRow.appendChild( td4 );
+		tbody.appendChild( tRow );
+		table.appendChild( tbody );
+		button.parentNode.insertBefore( table, button.nextSibling );
+	}
+	
+}
+
+function step3( ){
+	var val = document.getElementById( "n" );
+	var n = val.value;
+	if( n == "" ){
+		//Proceed to finish
+		return -1;
+	}
+	for( var i = 0; i < parseInt( n ); i++ ){
+		var elem = document.getElementById( "extra" + i );
+		if( elem.checked ){
+			var len = document.getElementById( "nr"+ i );
+			len = len.value;
+			var table = document.createElement( "table" );
+			var caption = document.createElement( "caption" );
+			caption.appendChild( document.createTextNode( document.getElementById( "r"+ i ).value )   );
+			table.appendChild( caption );
+    		var thead = document.createElement( "thead" );
+    		var thRow = document.createElement( "tr" );
+    		var button = document.getElementById( "endButton" );
+    		var th1 = document.createElement( "th" );
+    		th1.appendChild( document.createTextNode( "Rubro" ) );
+    		var th2 = document.createElement( "th" );
+    		th2.appendChild( document.createTextNode( "Porcentaje" ) );
+    		thRow.appendChild( th1 );
+    		thRow.appendChild( th2 );
+    		table.appendChild( thead );
+    		thead.appendChild( thRow );
+    		button.parentNode.appendChild( table );
+    		tbody = document.createElement( "tbody" );
+    		for( var j = 0; j < len; j++ ){
+    			var tRow = document.createElement( "tr" );
+    			var td1 = document.createElement( "td" );
+    			var td2 = document.createElement( "td" );
+    			var sr = document.createElement( "input" );
+    			sr.setAttribute( "id", "sr" + j );
+    			sr.setAttribute( "type", "text" );
+    			var sval = document.createElement( "input" );
+    			sval.setAttribute( "id", "sval" + j );
+    			sval.setAttribute( "type", "number" );
+    			sval.setAttribute( "min", "0" );
+    			td1.appendChild( sr );
+    			td2.appendChild( sval );
+    			tRow.appendChild( td1 );
+    			tRow.appendChild( td2 );
+    			tbody.appendChild( tRow );
+    			table.appendChild( tbody);
+    		}
+		}
+	}
+}
+
+function activateN( n ){
+	var field = document.getElementById( "nr" + n );
+	var check = document.getElementById( "extra" + n );
+	if( check.checked ){
+		field.disabled = false;
+	}
+	else{
+		field.disabled = true;
+	}
+}	

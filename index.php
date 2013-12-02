@@ -37,6 +37,11 @@
 			$teacher = new teacherCtrl( );
 			$teacher -> run( $singleton );
 			break;
+		case "course":
+			require_once( "./controller/courseCtrl.php" );
+			$course = new courseCtrl( );
+			$course -> run( $singleton );
+			break;
 		default:
 			require_once( "./view/404.html" );
 	}

@@ -79,7 +79,11 @@
 							$header = file_get_contents( "./view/header.html" );
 							$content = file_get_contents( "./view/teacherCreateView.html" );
 							$footer = file_get_contents( "./view/footer.html" );
-							$script = file_get_contents( "./www/js/teacherGenerated.js" );
+							
+							$script = "<script>\n";
+							$script .= file_get_contents( "./www/js/teacherGenerated.js" );
+							$script .= "</script>\n";
+							$script = str_replace( "{id}", $_GET[ "id" ], $script );
 							
 							$footer = str_replace( "<!-- editTeacher-->", $script, $footer );
 							
