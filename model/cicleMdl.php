@@ -19,6 +19,7 @@
 		public function show(  ){
 			$this -> query = "select * from cicle";
 			$result =  $this -> connection -> query( $this -> query ) or die( "DB Error: Query" );
+			$rows = array( );
 			while( $row = $result -> fetch_assoc( ) ){
 				$rows[ ] = $row;
 			}

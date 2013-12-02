@@ -17,6 +17,7 @@
 		public function show(  ){
 			$query = "select * from teacher where status != 0 order by name ";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			$rows = array( );
 			while( $row = $result -> fetch_assoc( ) ){
 				$rows[ ] = $row;
 			}

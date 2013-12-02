@@ -18,6 +18,7 @@
 		public function getCareers( ){
 			$query = "select * from career";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			$rows = array( );
 			while( $row = $result -> fetch_assoc( ) ){
 				$rows[ ] = $row;
 			}
@@ -45,6 +46,7 @@
 		public function getAlumns( ){
 			$query = "select name, id, mail from alumn";
 			$result = $this -> connection -> query( $query ) or die( "DB Error: Query" );
+			$rows = array( );
 			while( $row = $result -> fetch_assoc( ) ){
 				$rows[ ] = $row;
 			}

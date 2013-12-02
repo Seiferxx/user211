@@ -17,13 +17,13 @@
         		<br>
         		A continuacion se muestra una lista de los cursos que estan a su cargo.
         	</p>
-        	<form class="form1">
+        	<form class="form1" name="form" action="" method="post">
         		<table>
         			<thead>
         				<tr>
         					<th><input type="checkbox" id="master" onclick="selectAll( )"/></th>
-        					<th>Ciclo escolar</th>
         					<th>Curso</th>
+        					<th>Ciclo escolar</th>
         					<th>Alumnos inscritos</th>
         					<th>Editar</th>
         					<th>Eliminar</th>
@@ -31,10 +31,10 @@
         			</thead>
         			<tbody>
         				<tr>
-        					<td><input type="checkbox" id="{id}"/></td>
+        					<td class="checker"><input type="checkbox" id="{id}" /></td>
+        					<td onclick="showDataCourse( {id} )" class="selected">{course}</td>
         					<td>{cicle}</td>
-        					<td>{course}</td>
-        					<td>{alumn}</td>
+        					<td onclick="showDataCourse( {id} )" class="selected">{alumns}</td>
         					<td><input type="button" value="Editar" id="edit{id}" onclick="editCourse({id})"></td>
         					<td><input type="button" value="X" id="delete{id}" onclick="deleteCourse({id})"></td>
         				</tr>
