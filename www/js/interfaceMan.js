@@ -201,13 +201,14 @@ function showDataTeacher( id ){
 	nrow.setAttribute( "id", "dataBox" );
 	var nelement = document.createElement( "td" );
 	nelement.setAttribute( "colspan", "6" );
+	nelement.setAttribute( "id", "dataContainer" );
 	nrow.appendChild( nelement );
 	row.parentNode.insertBefore( nrow, row.nextSibling );
-
+	getTeacherData( id );
 	
 }
 
-function showDataCicle( id ){aliali
+function showDataCicle( id ){
 	var r = document.getElementById( "dataBox" );
 	if( r != null ){
 		r.parentNode.removeChild( r );
@@ -219,9 +220,8 @@ function showDataCicle( id ){aliali
 	var nelement = document.createElement( "td" );
 	nelement.setAttribute( "colspan", "6" );
 	nelement.setAttribute( "id", "dataContainer" );
-	nrow.appendChild( nelement );ali
+	nrow.appendChild( nelement );
 	row.parentNode.insertBefore( nrow, row.nextSibling );
-	
 	getCicleData( id );
 }
 
@@ -230,7 +230,7 @@ function step2( ){
 	var val = document.getElementById( "n" );
 	var n = val.value;
 	if( n == "" ){
-		//Proceed to finish
+		//Error
 		return -1;
 	}
 	var table = document.createElement( "table" );
@@ -243,7 +243,7 @@ function step2( ){
 	th2.appendChild( document.createTextNode( "Porcentaje" ) );
 	var th3 = document.createElement( "th" );
 	th3.appendChild( document.createTextNode( "Hoja Extra?" ) );
-	var th4 = document.createElement( "th" );ali
+	var th4 = document.createElement( "th" );
 	th4.appendChild( document.createTextNode( "N" ) );
 	thRow.appendChild( th1 );
 	thRow.appendChild( th2 );
@@ -257,6 +257,7 @@ function step2( ){
 	nextButton.setAttribute( "onclick", "step3( )" );
 	nextButton.setAttribute( "value", "Siguiente" );
 	nextButton.setAttribute( "class", "endButton" );
+	nextButton.setAttribute( "id", "endButton2" );
 	table.parentNode.appendChild( nextButton );
 	var tbody = document.createElement( "tbody" );
 	for( var i = 0; i < parseInt( n ); i++ ){
@@ -293,6 +294,7 @@ function step2( ){
 		table.appendChild( tbody );
 		button.parentNode.insertBefore( table, button.nextSibling );
 	}
+	button.parentNode.removeChild( button );
 	
 }
 
@@ -300,7 +302,7 @@ function step3( ){
 	var val = document.getElementById( "n" );
 	var n = val.value;
 	if( n == "" ){
-		//Proceed to finish
+		document.form.submit( );
 		return -1;
 	}
 	for( var i = 0; i < parseInt( n ); i++ ){
@@ -314,7 +316,7 @@ function step3( ){
 			table.appendChild( caption );
     		var thead = document.createElement( "thead" );
     		var thRow = document.createElement( "tr" );
-    		var button = document.getElementById( "endButton" );
+    		var button = document.getElementById( "endButton2" );
     		var th1 = document.createElement( "th" );
     		th1.appendChild( document.createTextNode( "Rubro" ) );
     		var th2 = document.createElement( "th" );
@@ -325,6 +327,13 @@ function step3( ){
     		thead.appendChild( thRow );
     		button.parentNode.appendChild( table );
     		tbody = document.createElement( "tbody" );
+    		var nextButton = document.createElement( "input" );
+    		nextButton.setAttribute( "type", "button" );
+    		nextButton.setAttribute( "onclick", "finish( )" );
+    		nextButton.setAttribute( "value", "Siguiente" );
+    		nextButton.setAttribute( "class", "endButton" );
+    		nextButton.setAttribute( "id", "endButton3" );
+    		table.parentNode.appendChild( nextButton );
     		for( var j = 0; j < len; j++ ){
     			var tRow = document.createElement( "tr" );
     			var td1 = document.createElement( "td" );
@@ -341,10 +350,18 @@ function step3( ){
     			tRow.appendChild( td1 );
     			tRow.appendChild( td2 );
     			tbody.appendChild( tRow );
-    			table.appendChild( tbody);
+    			table.appendChild( tbody);	
     		}
 		}
 	}
+}
+
+function finish( ){
+	document.form.submit( );
+}
+
+function showDataCourse2( id ){
+	window.location.href="./index.php?control=course&action=detail&id=" + id;
 }
 
 function activateN( n ){

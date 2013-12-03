@@ -161,7 +161,18 @@ function getTeacherData( id ){
 	ajax.onreadystatechange = function( ){
 		if( ajax.readyState == 4 ){
 			var json = eval( ajax.responseText );
-			alert( json );
+			var container = document.getElementById( "dataContainer" );
+			var flag = false;
+			var header = document.createElement( "h4" );
+			header.appendChild( document.createTextNode( "Cursos Registrados por el Profesor" ) );
+			container.appendChild( header );
+			for( i in json ){
+				flag = true;
+				container.appendChild( document.createTextNode( json[ i ].course ) );
+			}
+			if( !flag ){
+				container.appendChild( document.createTextNode( "No Existe Ningun curso Registrado por este Profesor" ) );
+			}
 		}
 	}
 	ajax.send( "id="+id );

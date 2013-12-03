@@ -99,6 +99,27 @@
 					echo $content;
 					echo $footer;
 					break;
+				case "index":
+					$header = file_get_contents( "./view/header.html" );
+					$content = file_get_contents( "./view/alumnIndex.html" );
+					$footer = file_get_contents( "./view/footer.html" );
+					
+					echo $header;
+					echo $content;
+					echo $footer;	
+					break;
+				case "config":
+					$content = file_get_contents( "./view/configView.html" );
+					$header = file_get_contents( "./view/header.html" );
+					$footer = file_get_contents( "./view/footer.html" );
+					
+					$content = str_replace( "{user}", "alumn" , $content );
+					$content = str_replace( "{name}", "Alumno" , $content );
+					
+					echo $header;
+					echo $content;
+					echo $footer;
+					break;
 				default:
 					require_once( "./view/404.html" );
 			}

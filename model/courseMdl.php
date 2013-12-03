@@ -26,6 +26,16 @@
 			return $rows;
 		}
 		
+		public function getCourse( ){
+			$this -> query = "select id, course from course";
+			$result =  $this -> connection -> query( $this -> query ) or die( "DB Error: Query" );
+			$rows = array( );
+			while( $row = $result -> fetch_assoc( ) ){
+				$rows[ ] = $row;
+			}
+			return $rows;
+		}
+		
 	}
 
 

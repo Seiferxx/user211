@@ -46,7 +46,7 @@
 						$header = file_get_contents( "./view/header.html" );
 						$content = file_get_contents( "./view/teacherCreateView.html" );
 						$footer = file_get_contents( "./view/footer.html" );
-					
+						
 						echo $header;
 						echo $content;
 						echo $footer;

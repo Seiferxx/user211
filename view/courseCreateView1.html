@@ -11,23 +11,10 @@
         		Indique los datos correspondientes al curso.
         	</p>
         	<div class="cleaner"></div>
-        	<form method="post" class="form1">
+        	<form method="post" class="form1" name="form" action="./index.php?control=course&action=save">
         		<div class="inputPair">
 		    		<label class="inputLabel2">Ciclo:</label>
 		    		<select>
 		    			<option value="{id}">{cicle}</option>
 		    		</select>
         		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2">Nombre</label>
-		    		<select>
-		    			<option value="{id}">{course}</option>
-		    		</select>
-        		</div>
-        		<div class="inputPair">
-		    		<label class="inputLabel2" for="n">Cantidad de Rubros</label>
-		    		<input id="n" name="n" type="number" min="0"/>
-				</div>
-        		<input class="endButton" id="endButton" type="button" value="Siguiente" onclick="step2( )"/>
-        	</form>
-        </section>
